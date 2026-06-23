@@ -60,12 +60,6 @@ export default function Navbar() {
           </ul>
           
           <div className="flex items-center gap-4">
-            <Link href="/login">
-              <Button variant="ghost" className="text-foreground hover:text-primary hover:bg-primary/10">Login</Button>
-            </Link>
-            <Link href="/signup">
-              <Button variant="outline" className="border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground">Sign Up</Button>
-            </Link>
             <a href="https://wa.me/919918929709?text=Namaste%20Pandit%20Ji,%20I%20need%20astrological%20guidance" target="_blank" rel="noreferrer">
               <Button className="bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-[0_0_15px_rgba(37,211,102,0.3)]">
                 WhatsApp
@@ -100,12 +94,6 @@ export default function Navbar() {
             ))}
           </ul>
           <div className="flex flex-col gap-3 mt-4">
-            <Link href="/login" onClick={() => setMobileMenuOpen(false)}>
-              <Button variant="outline" className="w-full justify-center">Login</Button>
-            </Link>
-            <Link href="/signup" onClick={() => setMobileMenuOpen(false)}>
-              <Button className="w-full justify-center bg-primary text-primary-foreground">Sign Up</Button>
-            </Link>
             <a href="https://wa.me/919918929709?text=Namaste%20Pandit%20Ji,%20I%20need%20astrological%20guidance" target="_blank" rel="noreferrer">
               <Button className="w-full justify-center bg-[#25D366] hover:bg-[#20bd5a] text-white">
                 WhatsApp
