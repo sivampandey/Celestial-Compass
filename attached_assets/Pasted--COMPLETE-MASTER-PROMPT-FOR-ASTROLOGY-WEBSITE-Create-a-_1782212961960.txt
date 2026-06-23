@@ -1,0 +1,282 @@
+🕉️ COMPLETE MASTER PROMPT FOR ASTROLOGY WEBSITE
+Create a premium, modern, luxury astrology consultation website for Pandit Vikas Chand Tripathi Ji. The website should look like a high-end spiritual brand, not a traditional astrology website. The design must be visually stunning, mobile-first, SEO-optimized, fast-loading, and focused on generating WhatsApp consultations.
+Use the uploaded photo of Pandit Vikas Chand Tripathi Ji as the main branding image throughout the website.
+CLIENT DETAILS
+Name
+Pandit Vikas Chand Tripathi Ji
+Address
+Rashulpur, Badagaon, Varanasi, Uttar Pradesh – 221204
+WhatsApp Number
++91 9918929709
+Instagram
+@vikaspandit668
+Tagline
+Guiding Lives Through Vedic Wisdom and Divine Astrology
+TECH STACK
+Frontend:
+Next.js 15
+React
+TypeScript
+Tailwind CSS
+Framer Motion
+GSAP
+ShadCN UI
+Backend:
+Node.js
+Express.js
+Database:
+MongoDB
+Authentication:
+JWT Authentication
+Google Login
+Deployment:
+Vercel + Render
+SPLASH SCREEN (FIRST VISIT ONLY)
+When users open the website for the first time, display a divine animated welcome screen.
+Background:
+Deep cosmic blue
+Purple nebula effects
+Rotating zodiac wheel
+Golden particles
+Spiritual glow effects
+Center:
+Large glowing Om Symbol
+🕉️
+After the Om symbol appears, animate the Gayatri Mantra line-by-line.
+Display:
+ॐ भूर्भुवः स्वः
+तत्सवितुर्वरेण्यं
+भर्गो देवस्य धीमहि।
+धियो यो नः प्रचोदयात्॥
+After the mantra finishes, show:
+Welcome to the Divine Guidance of Pandit Vikas Chand Tripathi Ji
+Then create a golden light transition that smoothly opens the homepage.
+Duration: 4–5 seconds
+Store completion in localStorage so returning visitors skip this screen.
+NAVIGATION BAR
+Sticky Navbar
+Left:
+Logo
+Pandit Vikas Chand Tripathi Ji
+Center:
+Home
+Services
+About
+Testimonials
+FAQ
+Contact
+Right:
+Login
+Sign Up
+WhatsApp Button
+Glassmorphism effect on scroll.
+HERO SECTION
+Full-screen luxury hero section.
+Left Side:
+Use the uploaded image of Pandit Vikas Chand Tripathi Ji.
+Enhance image professionally:
+Remove background
+Add subtle golden aura
+Circular golden border
+Spiritual cosmic background
+Right Side:
+Pandit Vikas Chand Tripathi Ji
+Vedic Astrologer | Marriage Consultant | Career & Financial Guidance Expert
+📍 Rashulpur, Badagaon, Varanasi
+⭐ 15+ Years Experience
+⭐ 5000+ Successful Consultations
+⭐ 98% Client Satisfaction
+⭐ Online & Offline Consultation Available
+Buttons:
+🟢 Chat on WhatsApp
+📞 Call Now
+📅 Book Consultation
+Background:
+Animated zodiac wheel
+Constellations
+Temple silhouette
+Floating celestial particles
+SERVICES SECTION
+Heading:
+Problems We Help Solve
+Create premium scroll-based service cards.
+Each card contains:
+Large AI-generated image
+Service title
+Description
+WhatsApp button
+Hover effects
+Scroll animations
+Alternate image layout left-right.
+1. Love & Relationship Problems ❤️
+Description: Guidance for relationship issues, misunderstandings, compatibility concerns, breakups, and love life challenges.
+Image: Happy Indian couple with zodiac symbols and celestial spiritual background.
+2. Job & Career Problems 💼
+Description: Solutions for career growth, promotions, job delays, and workplace challenges.
+Image: Professional person with horoscope chart and celestial symbols.
+3. Money & Financial Problems 💰
+Description: Guidance for debt issues, financial stability, income growth, and wealth creation.
+Image: Golden coins, prosperity symbols, and luxury astrology theme.
+4. Marriage Delay Problems 💍
+Description: Consultation for delayed marriage and finding the right life partner.
+Image: Traditional Indian wedding scene with spiritual astrology symbols.
+5. Business Problems 📈
+Description: Solutions for business losses, partnership issues, and business growth challenges.
+Image: Businessman analyzing growth charts with celestial energy.
+6. Study & Education Problems 📚
+Description: Guidance for concentration, academic performance, examinations, and educational success.
+Image: Student studying with books and astrology symbols.
+7. Health Problems 🏥
+Description: Consultation for health concerns, energy balance, and overall well-being.
+Image: Healing energy, wellness, positive aura, spiritual protection.
+8. Court Case & Legal Problems ⚖️
+Description: Guidance for legal disputes, court matters, and property-related conflicts.
+Image: Justice scale and legal documents with spiritual theme.
+9. Child & Family Problems 👶
+Description: Consultation for fertility concerns, family harmony, and child-related matters.
+Image: Happy family receiving blessings.
+10. Stress & Mental Peace Problems 🧘
+Description: Solutions for anxiety, emotional imbalance, stress, and negative thoughts.
+Image: Person meditating under a celestial sky.
+FLOATING BUTTONS
+Visible on every page.
+WhatsApp
+Number: +91 9918929709
+Link:
+https://wa.me/919918929709?text=Namaste%20Pandit%20Ji,%20I%20need%20astrological%20guidance⁠�
+Features:
+Floating
+Pulse Animation
+Mobile Friendly
+Call Button
+Direct calling support.
+WHY CHOOSE US
+Create six premium feature cards.
+15+ Years Experience
+Personalized Solutions
+Confidential Consultation
+Fast Response
+Online Consultation
+Trusted By Thousands
+Animated icons and hover effects.
+ABOUT SECTION
+Large image of Pandit Ji.
+Include:
+Biography
+Spiritual Journey
+Expertise
+Achievements
+Experience
+Animated Counters:
+5000+ Consultations
+15+ Years Experience
+98% Client Satisfaction
+1000+ Success Stories
+TESTIMONIALS
+Premium glassmorphism slider.
+10 sample reviews.
+Include:
+Client photo
+Name
+City
+Star rating
+Review
+Auto-play carousel.
+FAQ
+Accordion Layout.
+Questions:
+How does astrology consultation work?
+Can consultation be done online?
+How long does consultation take?
+What details are required?
+How can I contact Pandit Ji?
+CONTACT SECTION
+Display:
+📍 Rashulpur, Badagaon, Varanasi, Uttar Pradesh – 221204
+📞 +91 9918929709
+📱 WhatsApp Available
+📸 Instagram: @vikaspandit668
+📧 Professional Contact Email
+Embed Google Map.
+CONSULTATION FORM
+Fields:
+Full Name
+Mobile Number
+Email
+Problem Category
+Message
+Button:
+Request Consultation
+Store data in MongoDB.
+Send notification to Admin Dashboard.
+LOGIN PAGE
+Premium astrology-themed login page.
+Fields:
+Email / Mobile
+Password
+Options:
+Remember Me
+Forgot Password
+Buttons:
+Login
+Continue with Google
+SIGN UP PAGE
+Fields:
+Full Name
+Mobile Number
+Email
+Date of Birth
+Password
+Confirm Password
+Buttons:
+Create Account
+Continue with Google
+USER DASHBOARD
+Features:
+Profile Management
+Book Consultation
+Consultation History
+Saved Kundli Information
+Request Tracking
+Account Settings
+ADMIN DASHBOARD
+Secure admin panel.
+Features:
+Manage Users
+Manage Consultations
+Manage Services
+Manage Testimonials
+Manage Images
+Manage Contact Forms
+Manage WhatsApp Number
+Analytics Dashboard
+Website Content Management
+Full CRUD functionality.
+SEO & LOCAL SEO
+Optimize for:
+Best Astrologer in Varanasi
+Vedic Astrology Consultation
+Marriage Problem Solution
+Career Astrology Guidance
+Financial Astrology Expert
+Online Astrology Consultation
+Pandit Vikas Chand Tripathi
+Implement:
+Meta Tags
+Open Graph
+Sitemap.xml
+Robots.txt
+Structured Data
+Local Business Schema
+PERFORMANCE
+Requirements:
+Lighthouse Score 95+
+Fully Responsive
+Mobile First
+Fast Loading
+Lazy Loading
+Optimized Images
+Smooth Animations
+Core Web Vitals Optimized
+FINAL OBJECTIVE
+Build a premium spiritual digital platform that establishes trust immediately, starts with a divine Gayatri Mantra welcome experience, showcases Pandit Vikas Chand Tripathi Ji professionally, highlights all astrology consultation services through engaging storytelling sections, includes login/signup and dashboard functionality, and maximizes consultation bookings through WhatsApp and direct contact options. The website should feel luxurious, modern, spiritual, elegant, fast, and memorable. 🕉️✨🚀

@@ -1,0 +1,67 @@
+uploads = []
+
+[[generated]]
+id = "iUTDE1WJjDh6W1_1VuXm7"
+uri = "file://artifacts/astrology-website/src/assets/images/hero.png"
+type = "image"
+title = "Astrologer portrait with cosmic glow"
+
+[[generated]]
+id = "Kg0veJcz394LBBM3rey3Q"
+uri = "file://artifacts/astrology-website/src/assets/images/service-love.png"
+type = "image"
+title = "Happy couple with zodiacs"
+
+[[generated]]
+id = "oSjOBThFeAqlMpJHHIRdK"
+uri = "file://artifacts/astrology-website/src/assets/images/service-career.png"
+type = "image"
+title = "Professional with glowing chart"
+
+[[generated]]
+id = "P0HsdiDtO4i-DRxj9jA8h"
+uri = "file://artifacts/astrology-website/src/assets/images/service-money.png"
+type = "image"
+title = "Golden coins and prosperity"
+
+[[generated]]
+id = "uRno-zxDfpI811lchbZJi"
+uri = "file://artifacts/astrology-website/src/assets/images/service-marriage.png"
+type = "image"
+title = "Indian wedding sacred fire"
+
+[[generated]]
+id = "P-oLscs6Rj8CObFbcrm3T"
+uri = "file://artifacts/astrology-website/src/assets/images/service-business.png"
+type = "image"
+title = "Businessman with celestial energy"
+
+[[generated]]
+id = "5rlMuTGdWF6ImOJIC13bS"
+uri = "file://artifacts/astrology-website/src/assets/images/service-education.png"
+type = "image"
+title = "Student with glowing books"
+
+[[generated]]
+id = "wya170gdopONS-RzoXLcF"
+uri = "file://artifacts/astrology-website/src/assets/images/service-health.png"
+type = "image"
+title = "Meditation with healing aura"
+
+[[generated]]
+id = "_lDwF1qQSP4T7M4tE-X9t"
+uri = "file://artifacts/astrology-website/src/assets/images/service-legal.png"
+type = "image"
+title = "Justice scales with gold glow"
+
+[[generated]]
+id = "rcQFk_oyazNhEPb2lt4_R"
+uri = "file://artifacts/astrology-website/src/assets/images/service-family.png"
+type = "image"
+title = "Happy family divine blessings"
+
+[[outputs]]
+id = "U-ymWDpi-egQcLsQqaAB1"
+uri = "file://artifacts/astrology-website/src/assets/images/service-peace.png"
+type = "image"
+title = "Person meditating under starry night sky or space, serene, peaceful"
