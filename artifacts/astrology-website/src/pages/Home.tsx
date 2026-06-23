@@ -35,7 +35,7 @@ function Hero() {
           </div>
           
           <h1 className="text-5xl md:text-7xl font-serif font-bold text-foreground leading-[1.1]">
-            <span className="block text-primary drop-shadow-[0_0_15px_rgba(212,175,55,0.4)]">Pandit Vikas Chand</span>
+            <span className="block text-primary drop-shadow-[0_0_15px_rgba(212,175,55,0.4)]">Pandit Vikas Chandra</span>
             Tripathi Ji
           </h1>
           
@@ -85,7 +85,7 @@ function Hero() {
           <div className="absolute -inset-4 bg-primary/20 blur-[50px] -z-10 rounded-full" />
           <img 
             src="/src/assets/images/hero.png" 
-            alt="Pandit Vikas Chand Tripathi Ji" 
+            alt="Pandit Vikas Chandra Tripathi Ji" 
             className="w-full h-full object-cover rounded-2xl border border-primary/20 shadow-2xl relative z-0"
           />
         </motion.div>
@@ -216,7 +216,7 @@ function About() {
               <div className="w-24 h-1 bg-primary rounded-full mb-6" />
             </div>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              <span className="text-primary font-semibold">Pandit Vikas Chand Tripathi Ji</span> is a renowned Vedic astrologer based in the holy city of Varanasi, Uttar Pradesh. With over 15 years of dedicated practice in Vedic Astrology, Kundli reading, and spiritual guidance, he has guided more than 5000 individuals and families through life's most challenging moments.
+              <span className="text-primary font-semibold">Pandit Vikas Chandra Tripathi Ji</span> is a renowned Vedic astrologer based in the holy city of Varanasi, Uttar Pradesh. With over 15 years of dedicated practice in Vedic Astrology, Kundli reading, and spiritual guidance, he has guided more than 5000 individuals and families through life's most challenging moments.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
               His approach combines deep scriptural knowledge with modern psychological understanding, offering practical, achievable remedies that bring real transformation.

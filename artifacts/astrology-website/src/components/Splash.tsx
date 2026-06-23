@@ -71,7 +71,7 @@ export default function Splash() {
             className="text-2xl md:text-3xl text-foreground font-serif text-center max-w-2xl px-4 tracking-wide"
           >
             Welcome to the Divine Guidance of <br/>
-            <span className="text-primary font-semibold mt-2 block">Pandit Vikas Chand Tripathi Ji</span>
+            <span className="text-primary font-semibold mt-2 block">Pandit Vikas Chandra Tripathi Ji</span>
           </motion.h1>
         </motion.div>
       )}
