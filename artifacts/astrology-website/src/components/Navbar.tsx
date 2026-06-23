@@ -38,7 +38,7 @@ export default function Navbar() {
           <div className="flex items-center gap-2 cursor-pointer group">
             <span className="text-3xl text-primary group-hover:drop-shadow-[0_0_10px_rgba(212,175,55,0.8)] transition-all">🕉️</span>
             <div className="flex flex-col">
-              <span className="font-serif font-bold text-xl text-foreground leading-tight tracking-wide">Pandit Vikas Chand</span>
+              <span className="font-serif font-bold text-xl text-foreground leading-tight tracking-wide">Pandit Vikas Chandra</span>
               <span className="font-serif text-sm text-primary leading-none tracking-widest">Tripathi Ji</span>
             </div>
           </div>

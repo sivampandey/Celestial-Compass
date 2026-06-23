@@ -10,7 +10,7 @@ export default function Footer() {
             <div className="flex items-center gap-2">
               <span className="text-3xl text-primary">🕉️</span>
               <div className="flex flex-col">
-                <span className="font-serif font-bold text-lg text-foreground leading-tight">Pandit Vikas Chand</span>
+                <span className="font-serif font-bold text-lg text-foreground leading-tight">Pandit Vikas Chandra</span>
                 <span className="font-serif text-xs text-primary leading-none tracking-widest">Tripathi Ji</span>
               </div>
             </div>
@@ -61,7 +61,7 @@ export default function Footer() {
 
         <div className="border-t border-border/50 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted-foreground text-center md:text-left">
-            &copy; {new Date().getFullYear()} Pandit Vikas Chand Tripathi Ji. All rights reserved.
+            &copy; {new Date().getFullYear()} Pandit Vikas Chandra Tripathi Ji. All rights reserved.
           </p>
           <div className="flex items-center gap-4 text-xs text-muted-foreground">
             <span className="cursor-pointer hover:text-primary">Privacy Policy</span>
