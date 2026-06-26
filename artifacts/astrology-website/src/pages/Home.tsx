@@ -8,6 +8,18 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useToast } from "@/hooks/use-toast";
 import heroImage from "@/assets/images/hero.png";
+
+import serviceLove from "@/assets/images/service-love.png";
+import serviceCareer from "@/assets/images/service-career.png";
+import serviceMoney from "@/assets/images/service-money.png";
+import serviceMarriage from "@/assets/images/service-marriage.png";
+import serviceBusiness from "@/assets/images/service-business.png";
+import serviceEducation from "@/assets/images/service-education.png";
+import serviceHealth from "@/assets/images/service-health.png";
+import serviceLegal from "@/assets/images/service-legal.png";
+import serviceFamily from "@/assets/images/service-family.png";
+import servicePeace from "@/assets/images/service-peace.png";
+
 // --- HERO SECTION ---
 function Hero() {
   return (
@@ -84,7 +96,7 @@ function Hero() {
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10 rounded-2xl" />
           <div className="absolute -inset-4 bg-primary/20 blur-[50px] -z-10 rounded-full" />
           <img 
-            src="/src/assets/images/hero.png" 
+            src={heroImage}
             alt="Pandit Vikas Chandra Tripathi Ji" 
             className="w-full h-full object-cover rounded-2xl border border-primary/20 shadow-2xl relative z-0"
           />
@@ -96,16 +108,76 @@ function Hero() {
 
 // --- SERVICES SECTION ---
 const services = [
-  { id: "love", title: "Love & Relationship Problems", desc: "Overcome misunderstandings and reunite with your loved ones through powerful Vedic remedies.", img: "/src/assets/images/service-love.png", icon: "❤️" },
-  { id: "career", title: "Job & Career Problems", desc: "Unlock professional growth, get your dream job, and overcome office politics.", img: "/src/assets/images/service-career.png", icon: "💼" },
-  { id: "money", title: "Money & Financial Problems", desc: "Remove wealth blockages and attract abundance, prosperity, and financial stability.", img: "/src/assets/images/service-money.png", icon: "💰" },
-  { id: "marriage", title: "Marriage Delay Problems", desc: "Resolve manglik dosha and other planetary obstructions causing delays in your marriage.", img: "/src/assets/images/service-marriage.png", icon: "💍" },
-  { id: "business", title: "Business Problems", desc: "Expand your enterprise and turn losses into profits with precise astrological guidance.", img: "/src/assets/images/service-business.png", icon: "📈" },
-  { id: "education", title: "Study & Education Problems", desc: "Enhance concentration, score better grades, and choose the right academic path.", img: "/src/assets/images/service-education.png", icon: "📚" },
-  { id: "health", title: "Health Problems", desc: "Identify planetary causes of prolonged illnesses and accelerate healing through spiritual remedies.", img: "/src/assets/images/service-health.png", icon: "🏥" },
-  { id: "legal", title: "Court Case & Legal Problems", desc: "Get favorable outcomes in legal disputes and protection from false accusations.", img: "/src/assets/images/service-legal.png", icon: "⚖️" },
-  { id: "family", title: "Child & Family Problems", desc: "Restore family harmony and seek blessings for progeny and peaceful domestic life.", img: "/src/assets/images/service-family.png", icon: "👶" },
-  { id: "peace", title: "Stress & Mental Peace Problems", desc: "Find spiritual solace, overcome anxiety, and balance your mind, body, and soul.", img: "/src/assets/images/service-peace.png", icon: "🧘" }
+  {
+    id: "love",
+    title: "Love & Relationship Consultation",
+    desc: "Resolve relationship conflicts, strengthen emotional bonds, and receive guidance for a happy and harmonious love life.",
+    img: serviceLove,
+    icon: "❤️"
+  },
+  {
+    id: "career",
+    title: "Career & Job Guidance",
+    desc: "Get expert astrological guidance for career growth, job opportunities, promotions, and professional success.",
+    img: serviceCareer,
+    icon: "💼"
+  },
+  {
+    id: "money",
+    title: "Wealth & Financial Guidance",
+    desc: "Overcome financial challenges, attract prosperity, and receive remedies for stable income and business growth.",
+    img: serviceMoney,
+    icon: "💰"
+  },
+  {
+    id: "marriage",
+    title: "Marriage & Matchmaking",
+    desc: "Find solutions for delayed marriage, compatibility issues, Manglik Dosha, and marital harmony.",
+    img: serviceMarriage,
+    icon: "💍"
+  },
+  {
+    id: "business",
+    title: "Business Success Consultation",
+    desc: "Receive astrological advice to overcome business obstacles, increase profits, and make confident business decisions.",
+    img: serviceBusiness,
+    icon: "📈"
+  },
+  {
+    id: "education",
+    title: "Education & Student Guidance",
+    desc: "Improve concentration, academic performance, and career direction with personalized astrological insights.",
+    img: serviceEducation,
+    icon: "📚"
+  },
+  {
+    id: "health",
+    title: "Health & Wellness Guidance",
+    desc: "Understand planetary influences on health and receive spiritual remedies for physical and mental well-being.",
+    img: serviceHealth,
+    icon: "🏥"
+  },
+  {
+    id: "legal",
+    title: "Legal & Court Case Guidance",
+    desc: "Seek astrological support for legal disputes, court matters, and protection from unnecessary conflicts.",
+    img: serviceLegal,
+    icon: "⚖️"
+  },
+  {
+    id: "family",
+    title: "Family & Child Consultation",
+    desc: "Restore peace in family relationships, resolve domestic issues, and receive guidance for child-related concerns.",
+    img: serviceFamily,
+    icon: "👶"
+  },
+  {
+    id: "peace",
+    title: "Mental Peace & Spiritual Healing",
+    desc: "Reduce stress, achieve inner peace, and strengthen your spiritual journey through Vedic guidance.",
+    img: servicePeace,
+    icon: "🧘"
+  }
 ];
 
 function Services() {
