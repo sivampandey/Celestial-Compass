@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { MapPin, Star, Award, Users, CheckCircle, Clock, Shield, Globe, ChevronRight, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -23,7 +23,7 @@ import servicePeace from "@/assets/images/service-peace.png";
 // --- HERO SECTION ---
 function Hero() {
   return (
-    <section className="relative min-h-[100dvh] flex items-center pt-20 overflow-hidden">
+    <section className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-30 mix-blend-screen pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/50 to-background pointer-events-none" />
@@ -33,30 +33,30 @@ function Hero() {
         <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Zodiac_woodcut.png" alt="" className="w-full h-full object-contain invert brightness-200" />
       </div>
 
-      <div className="container mx-auto px-4 md:px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-5 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         {/* Text Content */}
         <motion.div 
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="space-y-8"
+          className="space-y-6 text-center lg:text-left"
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium tracking-wide">
             <Star size={14} className="fill-primary" />
             <span>Varanasi's Most Trusted Astrologer</span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-serif font-bold text-foreground leading-[1.1]">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold leading-tight">
             <span className="block text-primary drop-shadow-[0_0_15px_rgba(212,175,55,0.4)]">Pandit Vikas Chandra</span>
             Tripathi Ji
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground font-serif italic">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground font-serif italic leading-relaxed">
             Vedic Astrologer | Marriage Consultant <br className="hidden md:block" />
             Career & Financial Guidance Expert
           </p>
 
-          <div className="flex flex-wrap gap-4 text-sm text-foreground/80">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm text-foreground/80">
             <div className="flex items-center gap-2 bg-card/50 backdrop-blur-sm border border-border px-4 py-2 rounded-lg">
               <MapPin size={16} className="text-primary" />
               <span>Rashulpur, Badagaon, Varanasi</span>
@@ -71,16 +71,16 @@ function Hero() {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 pt-4">
-            <Button size="lg" className="text-base h-14 bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_20px_rgba(212,175,55,0.3)]">
+          <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-6">
+            <Button size="lg" className="w-full sm:w-auto h-12 sm:h-14 text-base bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_20px_rgba(212,175,55,0.3)]">
               <a href="#contact" className="w-full h-full flex items-center justify-center">Book Consultation</a>
             </Button>
             <a href="https://wa.me/919918929709?text=Namaste%20Pandit%20Ji,%20I%20need%20astrological%20guidance" target="_blank" rel="noreferrer" className="w-full sm:w-auto">
-              <Button size="lg" className="w-full text-base h-14 bg-[#25D366] hover:bg-[#20bd5a] text-white">
+              <Button size="lg" className="w-full sm:w-auto h-12 sm:h-14 text-base bg-[#25D366] hover:bg-[#20bd5a] text-white">
                 Chat on WhatsApp
               </Button>
             </a>
-            <Button size="lg" variant="outline" className="text-base h-14 border-primary/50 text-foreground hover:bg-primary/10">
+            <Button size="lg" variant="outline" className="w-full sm:w-auto h-12 sm:h-14 text-base border-primary/50 text-foreground hover:bg-primary/10">
               <a href="tel:+919918929709" className="w-full h-full flex items-center justify-center">Call Now</a>
             </Button>
           </div>
@@ -91,14 +91,16 @@ function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="relative lg:ml-auto w-full max-w-md mx-auto aspect-[3/4]"
+          className="relative mx-auto w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg aspect-[3/4]"
         >
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10 rounded-2xl" />
           <div className="absolute -inset-4 bg-primary/20 blur-[50px] -z-10 rounded-full" />
-          <img 
+          <img
             src={heroImage}
-            alt="Pandit Vikas Chandra Tripathi Ji" 
-            className="w-full h-full object-cover rounded-2xl border border-primary/20 shadow-2xl relative z-0"
+            loading="eager"
+            decoding="async"
+            alt="Pandit Vikas Chandra Tripathi Ji"
+            className="w-full h-full object-cover rounded-xl sm:rounded-2xl border border-primary/20 shadow-2xl"
           />
         </motion.div>
       </div>
@@ -182,8 +184,8 @@ const services = [
 
 function Services() {
   return (
-    <section id="services" className="py-24 bg-card/30 relative">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="services" className="py-16 sm:py-20 lg:py-24 bg-card/30 relative">
+      <div className="container mx-auto px-5 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-20">
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground mb-6">Problems We Help Solve</h2>
           <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-6" />
@@ -200,21 +202,21 @@ function Services() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
               key={service.id} 
-              className={`flex flex-col md:flex-row gap-8 items-center ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}
+              className={`flex flex-col lg:flex-row gap-10 items-center ${index % 2 !== 0 ? "lg:flex-row-reverse" : ""}`}
             >
               <div className="flex-1 w-full relative group">
                 <div className="absolute inset-0 bg-primary/20 blur-[40px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="relative rounded-2xl overflow-hidden border border-border/50 aspect-video shadow-xl">
-                  <img src={service.img} alt={service.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div className="relative rounded-2xl overflow-hidden border border-border/50 aspect-[4/3] sm:aspect-video shadow-xl">
+                  <img loading="lazy" decoding="async" src={service.img} alt={service.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
-                </div>
+                </div> 
               </div>
               <div className="flex-1 space-y-6">
                 <div className="text-4xl">{service.icon}</div>
-                <h3 className="text-3xl font-serif font-bold text-foreground">{service.title}</h3>
-                <p className="text-lg text-muted-foreground">{service.desc}</p>
+                <h3 className="text-2xl sm:text-3xl font-serif font-bold">{service.title}</h3>
+                <p className="text-base sm:text-lg leading-relaxed text-muted-foreground">{service.desc}</p>
                 <a href={`https://wa.me/919918929709?text=Namaste%20Pandit%20Ji,%20I%20need%20guidance%20regarding%20${encodeURIComponent(service.title)}`} target="_blank" rel="noreferrer" className="inline-block">
-                  <Button variant="outline" className="border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground gap-2">
+                  <Button variant="outline" className="w-full sm:w-auto border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground gap-2 ">
                     Consult for this <ChevronRight size={16} />
                   </Button>
                 </a>
@@ -239,14 +241,14 @@ function WhyChooseUs() {
   ];
 
   return (
-    <section className="py-24 relative overflow-hidden">
-      <div className="container mx-auto px-4 md:px-6">
+    <section className="py-16 sm:py-20 lg:py-24 relative overflow-hidden">
+      <div className="container mx-auto px-5 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground mb-6">Why Choose Us</h2>
           <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
           {features.map((feature, i) => (
             <motion.div 
               initial={{ opacity: 0, scale: 0.95 }}
@@ -272,10 +274,10 @@ function WhyChooseUs() {
 // --- ABOUT SECTION ---
 function About() {
   return (
-    <section id="about" className="py-24 bg-card/30 border-y border-border/50">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="relative aspect-square max-w-md mx-auto w-full">
+    <section id="about" className="py-16 sm:py-20 lg:py-24 bg-card/30 border-y border-border/50">
+      <div className="container mx-auto px-5 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          <div className="relative aspect-square max-w-[260px] sm:max-w-sm md:max-w-md mx-auto w-full">
             <div className="absolute inset-0 border-2 border-primary/30 rounded-full animate-[spin_60s_linear_infinite] border-dashed" />
             <div className="absolute inset-4 border border-primary/20 rounded-full animate-[spin_40s_linear_infinite_reverse]" />
             <div className="absolute inset-8 rounded-full overflow-hidden border-4 border-card shadow-2xl">
@@ -288,7 +290,7 @@ function About() {
           </div>
           <div className="space-y-8">
             <div>
-              <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground mb-6">About Pandit Ji</h2>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-foreground mb-6">About Pandit Ji</h2>
               <div className="w-24 h-1 bg-primary rounded-full mb-6" />
             </div>
             <p className="text-lg text-muted-foreground leading-relaxed">
@@ -298,7 +300,7 @@ function About() {
               His approach combines deep scriptural knowledge with modern psychological understanding, offering practical, achievable remedies that bring real transformation.
             </p>
             
-            <div className="grid grid-cols-2 gap-6 pt-6">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-6">
               <div>
                 <div className="text-4xl font-serif font-bold text-primary mb-2">5000+</div>
                 <div className="text-sm text-foreground uppercase tracking-wider">Consultations</div>
@@ -341,22 +343,23 @@ function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   // Auto scroll effect
-  useState(() => {
-    const timer = setInterval(() => {
-      setActiveIndex((current) => (current + 1) % testimonials.length);
-    }, 4000);
-    return () => clearInterval(timer);
-  });
+  useEffect(() => {
+  const timer = setInterval(() => {
+    setActiveIndex((current) => (current + 1) % testimonials.length);
+  }, 4000);
+
+  return () => clearInterval(timer);
+  }, []);
 
   return (
-    <section id="testimonials" className="py-24 relative overflow-hidden">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="testimonials" className="py-16 sm:py-20 lg:py-24 relative overflow-hidden">
+      <div className="container mx-auto px-5 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground mb-6">Divine Experiences</h2>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-foreground mb-6">Divine Experiences</h2>
           <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
         </div>
 
-        <div className="max-w-4xl mx-auto relative h-[300px]">
+        <div className="max-w-4xl mx-auto relative min-h-[340px] sm:min-h-[300px]">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeIndex}
@@ -364,12 +367,12 @@ function Testimonials() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -100 }}
               transition={{ duration: 0.5 }}
-              className="absolute inset-0 flex flex-col items-center justify-center text-center bg-card/40 backdrop-blur-lg border border-border p-8 md:p-12 rounded-3xl"
+              className="absolute inset-0 flex flex-col items-center justify-center text-center bg-card/40 backdrop-blur-lg border border-border p-6 sm:p-8 lg:p-12 rounded-3xl"
             >
               <div className="flex gap-1 mb-6 text-primary">
                 {[...Array(5)].map((_, i) => <Star key={i} fill="currentColor" size={24} />)}
               </div>
-              <p className="text-xl md:text-2xl font-serif text-foreground leading-relaxed italic mb-8">
+              <p className="text-lg sm:text-xl lg:text-2xl font-serif text-foreground leading-relaxed italic mb-8">
                 "{testimonials[activeIndex].text}"
               </p>
               <div>
@@ -406,10 +409,10 @@ function FAQ() {
   ];
 
   return (
-    <section id="faq" className="py-24 bg-card/30 border-y border-border/50">
-      <div className="container mx-auto px-4 md:px-6 max-w-3xl">
+    <section id="faq" className="py-16 sm:py-20 lg:py-24 bg-card/30 border-y border-border/50">
+      <div className="container mx-auto px-5 sm:px-6 lg:px-8 max-w-3xl">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground mb-6">Frequently Asked Questions</h2>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-foreground mb-6">Frequently Asked Questions</h2>
           <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
         </div>
         
@@ -446,11 +449,11 @@ function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 relative">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="grid lg:grid-cols-2 gap-16">
+    <section id="contact" className="py-16 sm:py-20 lg:py-24 relative">
+      <div className="container mx-auto px-5 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
           <div>
-            <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground mb-6">Seek Divine Guidance</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-foreground mb-6">Seek Divine Guidance</h2>
             <div className="w-24 h-1 bg-primary rounded-full mb-8" />
             <p className="text-lg text-muted-foreground mb-12">
               Fill out the form to request a consultation. Whether it's marriage, career, or peace of mind, the universe has an answer.
@@ -480,7 +483,7 @@ function Contact() {
             </div>
           </div>
           
-          <div className="bg-card/50 backdrop-blur-md border border-border p-8 rounded-3xl shadow-xl">
+          <div className="bg-card/50 backdrop-blur-md border border-border p-6 sm:p-8 rounded-3xl shadow-xl">
             <h3 className="text-2xl font-serif font-bold text-foreground mb-6">Request Consultation</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
