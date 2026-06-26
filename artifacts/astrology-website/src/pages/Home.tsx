@@ -279,7 +279,11 @@ function About() {
             <div className="absolute inset-0 border-2 border-primary/30 rounded-full animate-[spin_60s_linear_infinite] border-dashed" />
             <div className="absolute inset-4 border border-primary/20 rounded-full animate-[spin_40s_linear_infinite_reverse]" />
             <div className="absolute inset-8 rounded-full overflow-hidden border-4 border-card shadow-2xl">
-              <img src="/src/assets/images/hero.png" alt="Pandit Ji" className="w-full h-full object-cover" />
+              <img
+                 src={heroImage}
+                 alt="Pandit Ji"
+                 className="w-full h-full object-cover"
+              />
             </div>
           </div>
           <div className="space-y-8">
