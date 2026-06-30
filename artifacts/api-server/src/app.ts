@@ -31,4 +31,12 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/api", router);
 
+app.get("/", (_req, res) => {
+  res.json({
+    name: "Celestial Compass API",
+    status: "Running",
+    version: "1.0.0",
+  });
+});
+
 export default app;
