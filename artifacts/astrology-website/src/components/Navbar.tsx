@@ -60,7 +60,7 @@ export default function Navbar() {
           </ul>
           
           <div className="flex items-center gap-4">
-            <a href="https://wa.me/919918929709?text=Namaste%20Pandit%20Ji,%20I%20need%20astrological%20guidance" target="_blank" rel="noreferrer">
+            <a href="https://wa.me/919918929709?text=Namaste%20Pandit%20Ji,%20I%20need%20astrological%20guidance" target="_blank" rel="noopener noreferrer">
               <Button className="bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-[0_0_15px_rgba(37,211,102,0.3)]">
                 WhatsApp
               </Button>
@@ -94,7 +94,7 @@ export default function Navbar() {
             ))}
           </ul>
           <div className="flex flex-col gap-3 mt-4">
-            <a href="https://wa.me/919918929709?text=Namaste%20Pandit%20Ji,%20I%20need%20astrological%20guidance" target="_blank" rel="noreferrer">
+            <a href="https://wa.me/919918929709?text=Namaste%20Pandit%20Ji,%20I%20need%20astrological%20guidance" target="_blank" rel="noopener noreferrer">
               <Button className="w-full justify-center bg-[#25D366] hover:bg-[#20bd5a] text-white">
                 WhatsApp
               </Button>

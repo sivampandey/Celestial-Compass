@@ -75,7 +75,7 @@ function Hero() {
             <Button size="lg" className="w-full sm:w-auto h-12 sm:h-14 text-base bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_20px_rgba(212,175,55,0.3)]">
               <a href="#contact" className="w-full h-full flex items-center justify-center">Book Consultation</a>
             </Button>
-            <a href="https://wa.me/919918929709?text=Namaste%20Pandit%20Ji,%20I%20need%20astrological%20guidance" target="_blank" rel="noreferrer" className="w-full sm:w-auto">
+            <a href="https://wa.me/919918929709?text=Namaste%20Pandit%20Ji,%20I%20need%20astrological%20guidance" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
               <Button size="lg" className="w-full sm:w-auto h-12 sm:h-14 text-base bg-[#25D366] hover:bg-[#20bd5a] text-white">
                 Chat on WhatsApp
               </Button>
@@ -215,7 +215,7 @@ function Services() {
                 <div className="text-4xl">{service.icon}</div>
                 <h3 className="text-2xl sm:text-3xl font-serif font-bold">{service.title}</h3>
                 <p className="text-base sm:text-lg leading-relaxed text-muted-foreground">{service.desc}</p>
-                <a href={`https://wa.me/919918929709?text=Namaste%20Pandit%20Ji,%20I%20need%20guidance%20regarding%20${encodeURIComponent(service.title)}`} target="_blank" rel="noreferrer" className="inline-block">
+                <a href={`https://wa.me/919918929709?text=Namaste%20Pandit%20Ji,%20I%20need%20guidance%20regarding%20${encodeURIComponent(service.title)}`} target="_blank" rel="noopener noreferrer" className="inline-block">
                   <Button variant="outline" className="w-full sm:w-auto border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground gap-2 ">
                     Consult for this <ChevronRight size={16} />
                   </Button>

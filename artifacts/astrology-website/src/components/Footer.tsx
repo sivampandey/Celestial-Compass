@@ -43,7 +43,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-primary">📸</span>
-                <a href="https://instagram.com/vikaspandit668" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">@vikaspandit668</a>
+                <a href="https://instagram.com/vikaspandit668" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">@vikaspandit668</a>
               </li>
             </ul>
           </div>
