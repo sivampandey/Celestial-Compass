@@ -4,18 +4,20 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function Splash() {
   const [show, setShow] = useState(false);
 
-  useEffect(() => {
-    const hasSeenSplash = localStorage.getItem("hasSeenAstrologySplash");
-    if (!hasSeenSplash) {
-      setShow(true);
-      localStorage.setItem("hasSeenAstrologySplash", "true");
-      
-      const timer = setTimeout(() => {
-        setShow(false);
-      }, 5000);
-      return () => clearTimeout(timer);
-    }
-  }, []);
+ useEffect(() => {
+  const hasSeenSplash = localStorage.getItem("hasSeenAstrologySplash");
+
+  if (!hasSeenSplash) {
+    setShow(true);
+    localStorage.setItem("hasSeenAstrologySplash", "true");
+  }
+
+  const timer = setTimeout(() => {
+    setShow(false);
+  }, 5000);
+
+  return () => clearTimeout(timer);
+}, []);
 
   return (
     <AnimatePresence>
