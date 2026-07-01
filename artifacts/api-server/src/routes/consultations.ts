@@ -13,9 +13,9 @@ const consultationSchema = z.object({
     .min(7)
     .max(20)
     .regex(/^[0-9+\-\s()]+$/, "Invalid phone number"),
-  email: z.string().trim().email(),
+  email: z.string().trim().email().optional().or(z.literal("")),
   category: z.string().trim().min(2).max(100),
-  message: z.string().trim().min(5).max(5000),
+  message: z.string().trim().min(0).max(5000),
 });
 
 router.post("/consultations", async (req, res) => {
