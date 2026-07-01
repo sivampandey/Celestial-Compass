@@ -20,6 +20,9 @@ import serviceLegal from "@/assets/images/service-legal.png";
 import serviceFamily from "@/assets/images/service-family.png";
 import servicePeace from "@/assets/images/service-peace.png";
 
+const API_URL =
+  import.meta.env.VITE_API_URL ?? "http://localhost:3000";
+
 // --- HERO SECTION ---
 function Hero() {
   return (
@@ -436,17 +439,65 @@ function FAQ() {
 // --- CONTACT & FORM ---
 function Contact() {
   const { toast } = useToast();
-  
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    localStorage.setItem("lastConsultationRequest", new Date().toISOString());
+
+const [loading, setLoading] = useState(false);
+
+const [formData, setFormData] = useState({
+  name: "",
+  phone: "",
+  email: "",
+  category: "",
+  message: "",
+});
+
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  try {
+    setLoading(true);
+
+    const response = await fetch(
+      `${API_URL}/api/consultations`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      },
+    );
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.message);
+    }
+
     toast({
-      title: "Request Submitted Successfully",
-      description: "Pandit Ji's team will contact you shortly.",
-      variant: "default",
+      title: "Success",
+      description: data.message,
     });
-    (e.target as HTMLFormElement).reset();
-  };
+
+    setFormData({
+      name: "",
+      phone: "",
+      email: "",
+      category: "",
+      message: "",
+    });
+  } catch (err) {
+    toast({
+      variant: "destructive",
+      title: "Submission Failed",
+      description:
+        err instanceof Error
+          ? err.message
+          : "Something went wrong.",
+    });
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <section id="contact" className="py-16 sm:py-20 lg:py-24 relative">
@@ -488,21 +539,43 @@ function Contact() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
                 <label className="text-sm font-medium text-foreground">Full Name</label>
-                <Input required placeholder="Your full name" className="bg-background border-border/50 focus-visible:ring-primary" />
+                <Input
+  required
+  value={formData.name}
+  onChange={(e) => handleChange("name", e.target.value)}
+  placeholder="Your full name"
+  className="bg-background border-border/50 focus-visible:ring-primary"
+/>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-foreground">Mobile Number</label>
-                  <Input required type="tel" placeholder="+91" className="bg-background border-border/50 focus-visible:ring-primary" />
+                    <Input
+  required
+  type="tel"
+  value={formData.phone}
+  onChange={(e) => handleChange("phone", e.target.value)}
+  placeholder="+91"
+  className="bg-background border-border/50 focus-visible:ring-primary"
+/>
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-foreground">Email</label>
-                  <Input type="email" placeholder="Optional" className="bg-background border-border/50 focus-visible:ring-primary" />
+                  <Input
+  type="email"
+  value={formData.email}
+  onChange={(e) => handleChange("email", e.target.value)}
+  placeholder="Optional"
+  className="bg-background border-border/50 focus-visible:ring-primary"
+/>
                 </div>
               </div>
               <div className="space-y-2">
                 <label className="text-sm font-medium text-foreground">Problem Category</label>
-                <Select required>
+                <Select
+  value={formData.category}
+  onValueChange={(value) => handleChange("category", value)}
+>
                   <SelectTrigger className="bg-background border-border/50 focus:ring-primary">
                     <SelectValue placeholder="Select an area of concern" />
                   </SelectTrigger>
@@ -518,11 +591,20 @@ function Contact() {
               </div>
               <div className="space-y-2">
                 <label className="text-sm font-medium text-foreground">Brief Message (Optional)</label>
-                <Textarea placeholder="How can Pandit Ji help you?" className="bg-background border-border/50 focus-visible:ring-primary min-h-[100px]" />
+                <Textarea
+  value={formData.message}
+  onChange={(e) => handleChange("message", e.target.value)}
+  placeholder="How can Pandit Ji help you?"
+  className="bg-background border-border/50 focus-visible:ring-primary min-h-[100px]"
+/>
               </div>
-              <Button type="submit" className="w-full h-12 text-lg bg-primary text-primary-foreground hover:bg-primary/90">
-                Request Consultation
-              </Button>
+              <Button
+  type="submit"
+  disabled={loading}
+  className="w-full h-12 text-lg bg-primary text-primary-foreground hover:bg-primary/90"
+>
+  {loading ? "Submitting..." : "Request Consultation"}
+</Button>
             </form>
           </div>
         </div>
