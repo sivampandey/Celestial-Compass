@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { z } from "zod";
-import { db } from "../lib/db";
-import { consultations } from "../lib/schema";
+import { db } from "@workspace/db";
+import { consultations } from "@workspace/db";
 
 const router = Router();
 
