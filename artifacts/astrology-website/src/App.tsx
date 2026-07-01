@@ -8,8 +8,11 @@ import Splash from "@/components/Splash";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
+import { setBaseUrl } from "@workspace/api-client-react";
 
 const queryClient = new QueryClient();
+
+setBaseUrl(import.meta.env.VITE_API_URL);
 
 function Router() {
   return (
