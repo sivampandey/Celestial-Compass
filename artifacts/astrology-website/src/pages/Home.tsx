@@ -450,6 +450,16 @@ const [formData, setFormData] = useState({
   message: "",
 });
 
+const handleChange = (
+  field: keyof typeof formData,
+  value: string,
+) => {
+  setFormData((prev) => ({
+    ...prev,
+    [field]: value,
+  }));
+};
+
 const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
 
@@ -592,6 +602,7 @@ const handleSubmit = async (e: React.FormEvent) => {
               <div className="space-y-2">
                 <label className="text-sm font-medium text-foreground">Brief Message (Optional)</label>
                 <Textarea
+  required
   value={formData.message}
   onChange={(e) => handleChange("message", e.target.value)}
   placeholder="How can Pandit Ji help you?"
