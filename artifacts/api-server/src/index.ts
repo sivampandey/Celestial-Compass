@@ -2,7 +2,6 @@ import dotenv from "dotenv";
 import path from "path";
 import "dotenv/config";
 
-console.log("RESEND:", process.env.RESEND_API_KEY);
 dotenv.config();
 
 import app from "./app";

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useLocation } from "wouter";
 import { toast } from "sonner";
 import {
   getConsultations,
@@ -22,6 +23,7 @@ type Consultation = {
 };
 
 export default function Dashboard() {
+  const [, navigate] = useLocation();
   const [consultations, setConsultations] = useState<Consultation[]>([]);
   const previousCount = useRef(0);
   const [loading, setLoading] = useState(true);
@@ -32,6 +34,15 @@ export default function Dashboard() {
   const recordsPerPage = 10;
   const [selected, setSelected] = useState<Consultation | null>(null);
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem("adminToken");
+
+    if (!token) {
+      navigate("/admin/login");
+      return;
+    }
+  }, [navigate]);
 
   useEffect(() => {
     async function loadData() {
