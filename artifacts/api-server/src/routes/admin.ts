@@ -1,8 +1,65 @@
 import { Router } from "express";
 import { db, consultations } from "@workspace/db";
 import { eq, desc } from "drizzle-orm";
+import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
+import {
+  ADMIN_EMAIL,
+  ADMIN_PASSWORD,
+  JWT_SECRET,
+} from "../config/auth";
+import { verifyAdmin } from "../middleware/auth";
 
 const router = Router();
+
+router.post("/admin/login", async (req, res) => {
+  try {
+    const { email, password } = req.body;
+
+    if (email !== ADMIN_EMAIL) {
+      return res.status(401).json({
+        success: false,
+        message: "Invalid email or password",
+      });
+    }
+
+    const passwordMatch = await bcrypt.compare(
+  password,
+  ADMIN_PASSWORD,
+);
+
+    if (!passwordMatch) {
+      return res.status(401).json({
+        success: false,
+        message: "Invalid email or password",
+      });
+    }
+
+    const token = jwt.sign(
+      {
+        email: ADMIN_EMAIL,
+      },
+      JWT_SECRET,
+      {
+        expiresIn: "7d",
+      },
+    );
+
+    return res.json({
+      success: true,
+      token,
+    });
+  } catch (error) {
+    console.error(error);
+
+    return res.status(500).json({
+      success: false,
+      message: "Login failed",
+    });
+  }
+});
+
+router.use("/admin", verifyAdmin);
 
 /**
  * GET /api/admin/consultations
