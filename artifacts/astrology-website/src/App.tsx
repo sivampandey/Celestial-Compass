@@ -28,20 +28,34 @@ function Router() {
 }
 
 function App() {
+  const currentPath = window.location.pathname;
+
+  const isAdmin =
+    currentPath.startsWith("/admin");
+
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
-          <Splash />
+
+          {!isAdmin && <Splash />}
+
           <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary selection:text-primary-foreground flex flex-col">
-            <Navbar />
+
+            {!isAdmin && <Navbar />}
+
             <main className="flex-1">
               <Router />
             </main>
-            <Footer />
-            <FloatingButtons />
+
+            {!isAdmin && <Footer />}
+
+            {!isAdmin && <FloatingButtons />}
+
           </div>
+
         </WouterRouter>
+
         <Toaster />
       </TooltipProvider>
     </QueryClientProvider>
