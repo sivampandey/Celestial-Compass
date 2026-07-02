@@ -21,6 +21,8 @@ export const consultations = pgTable("consultations", {
 
   message: text("message").notNull(),
 
+  status: text("status").default("Pending").notNull(),
+
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
 

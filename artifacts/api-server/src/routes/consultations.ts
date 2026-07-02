@@ -1,7 +1,8 @@
 import { Router } from "express";
 import { z } from "zod";
-import { db } from "@workspace/db";
-import { consultations } from "@workspace/db";
+import { eq } from "drizzle-orm";
+import { sendConfirmationEmail } from "../lib/email";
+import { db, consultations } from "@workspace/db";
 
 const router = Router();
 
@@ -30,6 +31,10 @@ router.post("/consultations", async (req, res) => {
       message: data.message,
     });
 
+    if (data.email) {
+      await sendConfirmationEmail(data.name, data.email);
+    }
+
     return res.status(201).json({
       success: true,
       message: "Consultation submitted successfully",
@@ -48,6 +53,24 @@ router.post("/consultations", async (req, res) => {
     return res.status(500).json({
       success: false,
       message: "Internal server error",
+    });
+  }
+});
+
+router.delete("/consultations/:id", async (req, res) => {
+  try {
+    await db
+      .delete(consultations)
+      .where(eq(consultations.id, Number(req.params.id)));
+
+    return res.json({
+      success: true,
+    });
+  } catch (error) {
+    console.error(error);
+
+    return res.status(500).json({
+      success: false,
     });
   }
 });
