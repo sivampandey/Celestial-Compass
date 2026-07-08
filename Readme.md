@@ -1,43 +1,137 @@
-# 🔮 Celestial Compass
+# 🌌 Celestial Compass – Premium Astrology Consultation Website
 
-A modern astrology web application built with **React, TypeScript, Vite, Tailwind CSS, and Node.js**.
-
-The project was originally generated using Replit and has been successfully configured to run locally in **Visual Studio Code** on Windows.
-
----
-
-# 📖 Project Overview
-
-Celestial Compass is a full-stack web application consisting of two main parts:
-
-- **Frontend** – React + Vite + TypeScript
-- **Backend** – Node.js + TypeScript API Server
-
-The frontend communicates with the backend through REST APIs.
+![React](https://img.shields.io/badge/React-19-blue?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?logo=typescript)
+![Vite](https://img.shields.io/badge/Vite-7-purple?logo=vite)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4-38BDF8?logo=tailwindcss)
+![Framer Motion](https://img.shields.io/badge/Framer--Motion-Latest-black)
+![Railway](https://img.shields.io/badge/Backend-Railway-success)
+![Vercel](https://img.shields.io/badge/Frontend-Vercel-black)
 
 ---
 
-# 🏗 Project Architecture
+## ✨ Overview
 
-```
-Celestial-Compass
-│
-├── artifacts
-│   ├── astrology-website      # React Frontend
-│   ├── api-server             # Backend API
-│   └── mockup-sandbox
-│
-├── attached_assets            # Images and static assets
-├── scripts                    # Helper scripts
-├── node_modules
-├── package.json               # Workspace configuration
-├── pnpm-workspace.yaml
-└── README.md
-```
+Celestial Compass is a modern, premium astrology consultation platform designed for **Pandit Vikas Chandra Tripathi Ji**.
+
+The website combines traditional Vedic astrology with a modern UI to provide an elegant and engaging user experience.
+
+Visitors can explore astrology services, learn about different consultation methods, understand common life problems, and instantly connect through WhatsApp.
 
 ---
 
-# ⚙️ Technology Stack
+# 🌐 Live Website
+
+Frontend
+
+https://celestial-compass-astrology-website.vercel.app/
+
+Backend
+
+Railway Deployment
+
+---
+
+# 👨‍💼 Client Information
+
+**Pandit Vikas Chandra Tripathi Ji**
+
+📍 Rashulpur Badagaon  
+Varanasi, Uttar Pradesh  
+India – 221204
+
+📱 WhatsApp
+
+9918929709
+
+Instagram
+
+@vikaspandit668
+
+---
+
+# 🚀 Features
+
+## 🏠 Hero Section
+
+- Premium animated hero
+- Vedic theme
+- Responsive layout
+- WhatsApp CTA
+- Scroll animations
+
+---
+
+## 🔮 Astrology Services
+
+- Horoscope Consultation
+- Kundli Matching
+- Marriage Problems
+- Career Guidance
+- Business Astrology
+- Financial Solutions
+- Health Consultation
+- Education Guidance
+
+---
+
+## ✨ Special Consultation Services
+
+- 🔢 Numerology (अंक ज्योतिष)
+- 🏡 Vaastu Shastra (वास्तु शास्त्र)
+- 😊 Face Reading (फेस रीडिंग)
+- ✋ Palmistry (हस्त रेखा विज्ञान)
+
+Features
+
+- Animated cards
+- Glassmorphism UI
+- Premium typography
+- Hover animations
+- WhatsApp consultation button
+
+---
+
+## ❤️ Problems We Help Solve
+
+- Love & Relationship
+- Marriage Delay
+- Career Problems
+- Business Loss
+- Financial Issues
+- Education
+- Health
+- Child Birth
+- Family Disputes
+- Legal Problems
+
+---
+
+## ⭐ Testimonials
+
+- Client reviews
+- Smooth animations
+- Premium cards
+
+---
+
+## 📞 Consultation Form
+
+- Responsive
+- Modern UI
+- WhatsApp Integration
+- Instant Contact
+
+---
+
+## 📱 Floating Buttons
+
+- WhatsApp
+- Call Button
+
+---
+
+# 🖥 Tech Stack
 
 ## Frontend
 
@@ -45,345 +139,205 @@ Celestial-Compass
 - TypeScript
 - Vite
 - Tailwind CSS
-- React Hook Form
 - Framer Motion
-- Radix UI
-
----
+- Lucide Icons
 
 ## Backend
 
 - Node.js
-- TypeScript
+- Express.js
+
+## Database
+
+- PostgreSQL
+- Drizzle ORM
+
+## Deployment
+
+Frontend
+
+- Vercel
+
+Backend
+
+- Railway
 
 ---
 
-## Package Manager
-
-- PNPM
-
----
-
-# 📂 Folder Structure
-
-## Root
-
-Contains the workspace configuration and shared dependencies.
-
-```
-package.json
-pnpm-workspace.yaml
-```
-
----
-
-## Frontend
+# 📂 Project Structure
 
 ```
 artifacts/
-    astrology-website/
-```
-
-Contains
-
-- Pages
-- Components
-- Hooks
-- UI
-- Forms
-- Routing
-- Tailwind CSS
-
-Runs on
-
-```
-http://localhost:5173
-```
-
----
-
-## Backend
-
-```
-artifacts/
-    api-server/
-```
-
-Responsible for
-
-- REST APIs
-- Business Logic
-- Database Communication
-- Authentication
-
-Runs on
-
-```
-http://localhost:3000
+│
+├── astrology-website/
+│
+│── src/
+│   ├── assets/
+│   ├── components/
+│   ├── hooks/
+│   ├── pages/
+│   ├── utils/
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── index.css
+│
+├── api-server/
+│
+├── lib/
+│
+└── scripts/
 ```
 
 ---
 
-## Attached Assets
+# 🎨 UI Features
 
-```
-attached_assets/
-```
-
-Contains
-
-- Images
-- Icons
-- Logos
-- Static Files
+- Premium Dark Theme
+- Golden Accent Colors
+- Glassmorphism
+- Framer Motion Animations
+- Responsive Design
+- Luxury Typography
+- Smooth Scrolling
+- Hover Effects
+- Mobile Optimized
 
 ---
 
-# 🚀 Installation
+# ⚡ Performance
 
-## Prerequisites
+- Lazy Loading
+- Optimized Images
+- Fast Page Rendering
+- Responsive Layout
+- SEO Friendly
 
-Install
+---
 
-- Node.js 22 LTS
-- PNPM
+# 📦 Installation
 
-Verify installation
+Clone Repository
 
 ```bash
-node -v
-pnpm -v
+git clone https://github.com/your-username/Celestial-Compass.git
 ```
 
----
+Go to Project
 
-# 📦 Install Dependencies
+```bash
+cd Celestial-Compass
+```
 
-From project root
+Install Dependencies
 
 ```bash
 pnpm install
 ```
 
----
-
-# ▶️ Running the Project
-
-## Start Backend
-
-Open Terminal 1
-
-```bash
-cd artifacts/api-server
-```
-
-Windows PowerShell
-
-```powershell
-$env:PORT=3000
-pnpm start
-```
-
-Backend runs on
-
-```
-http://localhost:3000
-```
-
----
-
-## Start Frontend
-
-Open Terminal 2
-
-```bash
-cd artifacts/astrology-website
-```
-
-If `vite.config.ts` already has default values:
+Run Development Server
 
 ```bash
 pnpm dev
 ```
 
-Otherwise
-
-```powershell
-$env:PORT=5173
-$env:BASE_PATH="/"
-pnpm dev
-```
-
-Frontend runs on
-
-```
-http://localhost:5173
-```
-
----
-
-# 🌐 Application Flow
-
-```
-User
-
-   │
-
-   ▼
-
-React Frontend
-
-   │ HTTP Request
-
-   ▼
-
-Backend API
-
-   │
-
-   ▼
-
-Business Logic
-
-   │
-
-   ▼
-
-Database
-
-   │
-
-   ▼
-
-JSON Response
-
-   │
-
-   ▼
-
-Frontend Updates UI
-```
-
----
-
-# 🛠 Development
-
-Frontend automatically reloads after every file save.
-
-Backend must remain running in a separate terminal.
-
----
-
-# 📁 Important Files
-
-## Root
-
-```
-package.json
-pnpm-workspace.yaml
-```
-
----
-
-## Frontend
-
-```
-vite.config.ts
-package.json
-src/
-```
-
----
-
-## Backend
-
-```
-package.json
-src/
-```
-
----
-
-# 📌 Useful Commands
-
-Install dependencies
-
-```bash
-pnpm install
-```
-
-Run frontend
-
-```bash
-cd artifacts/astrology-website
-pnpm dev
-```
-
-Run backend
-
-```bash
-cd artifacts/api-server
-pnpm start
-```
-
-Build frontend
+Build
 
 ```bash
 pnpm build
 ```
 
----
-
-# 🧩 Troubleshooting
-
-## PORT environment variable required
-
-Set
-
-```powershell
-$env:PORT=5173
-```
-
-or use the default value in `vite.config.ts`.
-
----
-
-## Backend not starting
-
-Set
-
-```powershell
-$env:PORT=3000
-```
-
-before running
+Preview
 
 ```bash
-pnpm start
+pnpm preview
 ```
 
 ---
 
-## Missing dependencies
+# 🌍 Environment Variables
 
-Run
+Frontend
 
-```bash
-pnpm install
 ```
+VITE_API_URL=your_backend_url
+```
+
+Backend
+
+```
+DATABASE_URL=your_database_url
+
+NODE_ENV=production
+
+PORT=5000
+```
+
+---
+
+# 📷 Assets
+
+Service Images
+
+- Hero Banner
+- Numerology
+- Vaastu
+- Face Reading
+- Palmistry
+- Problem Icons
+
+---
+
+# 📈 Future Improvements
+
+- Online Appointment Booking
+- Payment Gateway
+- Multi-language Support
+- Astrology Blog
+- Admin Dashboard
+- Customer Login
+- AI Horoscope Generator
+- Live Chat
+- Online Video Consultation
+
+---
+
+# 👨‍💻 Developer
+
+Designed & Developed by
+
+**Shivam Pandey**
 
 ---
 
 # 📄 License
 
-This project is intended for educational and development purposes.
+This project is developed for a private client.
+
+Unauthorized copying, distribution, or commercial use without permission is prohibited.
 
 ---
 
-# 👨‍💻 Author
+# ⭐ Acknowledgements
 
-Project Name: **Celestial Compass**
+Built with ❤️ using
 
-Developed using **Replit** and configured for local development in **Visual Studio Code**.
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Express.js
+- PostgreSQL
+- Railway
+- Vercel
+
+---
+
+## 🙏 Thank You
+
+Thank you for visiting Celestial Compass.
+
+We hope this platform helps people find clarity, guidance, and positivity through the wisdom of Vedic Astrology.
+
+🕉️ Om Tat Sat
 
 Maintained by **Shivam Pandey**.

@@ -229,11 +229,26 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border box-border;
+  }
+
+  html {
+    @apply scroll-smooth;
   }
 
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    @apply overflow-x-hidden bg-background font-sans text-foreground antialiased;
+  }
+
+  img {
+    @apply block max-w-full;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
   }
 }
 
