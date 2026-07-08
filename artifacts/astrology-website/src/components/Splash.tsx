@@ -59,7 +59,7 @@ export default function Splash() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1 + index * 0.5 }}
-                className="text-primary/90 text-xl md:text-2xl font-serif tracking-widest drop-shadow-md"
+                className="text-[clamp(1rem,2.5vw,1.5rem)] font-serif tracking-widest text-primary/90 drop-shadow-md"
               >
                 {line}
               </motion.p>
@@ -70,7 +70,7 @@ export default function Splash() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 3.5 }}
-            className="text-2xl md:text-3xl text-foreground font-serif text-center max-w-2xl px-4 tracking-wide"
+            className="max-w-2xl px-4 text-center font-serif text-[clamp(1.25rem,3vw,1.75rem)] tracking-wide text-foreground"
           >
             Welcome to the Divine Guidance of <br/>
             <span className="text-primary font-semibold mt-2 block">Pandit Vikas Chandra Tripathi Ji</span>

@@ -66,7 +66,7 @@ function Hero() {
         />
       </div>
 
-      <div className="container mx-auto px-5 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="relative z-10 mx-auto grid w-full max-w-screen-2xl grid-cols-1 items-center gap-10 px-4 sm:px-6 sm:gap-12 lg:grid-cols-2 lg:gap-16 lg:px-8 xl:px-10 2xl:px-12">
         {/* Text Content */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -92,7 +92,7 @@ function Hero() {
             Career & Financial Guidance Expert
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm text-foreground/80">
+          <div className="grid grid-cols-1 gap-3 text-sm text-foreground/80 sm:grid-cols-2 xl:grid-cols-3">
             <div className="flex items-center gap-2 bg-card/50 backdrop-blur-sm border border-border px-4 py-2 rounded-lg">
               <MapPin size={16} className="text-primary" />
               <span>Rashulpur, Badagaon, Varanasi</span>
@@ -107,9 +107,9 @@ function Hero() {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-6">
+          <div className="flex flex-col justify-center gap-3 pt-6 sm:flex-row sm:flex-wrap lg:justify-start">
             <Button
-              size="lg"
+              size="default"
               className="w-full sm:w-auto h-12 sm:h-14 text-base bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_20px_rgba(212,175,55,0.3)]"
             >
               <a
@@ -126,14 +126,14 @@ function Hero() {
               className="w-full sm:w-auto"
             >
               <Button
-                size="lg"
+                size="default"
                 className="w-full sm:w-auto h-12 sm:h-14 text-base bg-[#25D366] hover:bg-[#20bd5a] text-white"
               >
                 Chat on WhatsApp
               </Button>
             </a>
             <Button
-              size="lg"
+              size="default"
               variant="outline"
               className="w-full sm:w-auto h-12 sm:h-14 text-base border-primary/50 text-foreground hover:bg-primary/10"
             >
@@ -152,7 +152,7 @@ function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="relative mx-auto w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg aspect-[3/4]"
+          className="relative mx-auto w-full max-w-[20rem] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-[34rem] aspect-[3/4]"
         >
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10 rounded-2xl" />
           <div className="absolute -inset-4 bg-primary/20 blur-[50px] -z-10 rounded-full" />
@@ -174,34 +174,34 @@ function Hero() {
 const specialServices = [
   {
     id: 1,
-    title: "अंक ज्योतिष",
+    title: "Numerology",
     icon: "🔢",
     img: numerologyImage,
-    desc: "जन्मतिथि और नाम के अंकों के आधार पर व्यक्तित्व, करियर, विवाह, धन और भविष्य का विस्तृत विश्लेषण।",
+    desc: "Detailed analysis of personality, career, marriage, wealth and future based on date of birth and name numbers.",
   },
 
   {
     id: 2,
-    title: "वास्तु शास्त्र",
+    title: "Vastu Shastra",
     icon: "🏡",
     img: vastuImage,
-    desc: "घर, कार्यालय और व्यापार स्थल के वास्तु दोषों का समाधान कर सकारात्मक ऊर्जा और समृद्धि प्राप्त करें।",
+    desc: "Get positive energy and prosperity by solving Vastu defects in your home, office and business place.",
   },
 
   {
     id: 3,
-    title: "फेस रीडिंग",
+    title: "Face Reading",
     icon: "😊",
     img: faceReadingImage,
-    desc: "चेहरे की बनावट और भावों के आधार पर स्वभाव, भाग्य और जीवन की दिशा का गहन अध्ययन।",
+    desc: "In-depth study of nature, destiny and direction of life based on facial structure and expressions.",
   },
 
   {
     id: 4,
-    title: "हस्त रेखा विज्ञान",
+    title: "Palmistry",
     icon: "✋",
     img: palmistryImage,
-    desc: "हथेली की रेखाओं से स्वास्थ्य, करियर, विवाह और भविष्य के महत्वपूर्ण संकेत जानें।",
+    desc: "Know important signs of health, career, marriage and future from palm lines.",
   },
 ];
 
@@ -291,18 +291,17 @@ function Services() {
 
         <div className="text-center max-w-3xl mx-auto mb-20">
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground mb-6">
-            हमारी विशेष परामर्श सेवाएँ
+            Our Special Consultancy Services
           </h2>
 
           <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-6" />
 
           <p className="text-muted-foreground text-lg">
-            प्राचीन भारतीय ज्ञान के माध्यम से जीवन के हर महत्वपूर्ण पहलू का गहन
-            विश्लेषण।
+            In-depth analysis of every important aspect of life through ancient Indian wisdom.
           </p>
         </div>
 
-        <div className="space-y-36 mb-40">
+        <div className="space-y-8 sm:space-y-12 lg:space-y-20 mb-16 sm:mb-24 lg:mb-32">
           {specialServices.map((service, index) => (
             <motion.div
               key={service.id}
@@ -310,54 +309,54 @@ function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className={`relative overflow-hidden rounded-[32px] border border-primary/20 bg-gradient-to-br from-card/90 via-card/80 to-card/90 backdrop-blur-xl shadow-[0_20px_60px_rgba(0,0,0,0.45)] hover:border-primary/50 transition-all duration-700 group p-8 lg:p-12 flex flex-col lg:flex-row items-center gap-12
+              className={`relative overflow-hidden rounded-3xl border border-primary/20 bg-gradient-to-br from-card/95 via-card/90 to-card/95 backdrop-blur-xl shadow-xl hover:shadow-2xl hover:border-primary/40 transition-all duration-500 group flex flex-col lg:flex-row items-center p-4 sm:p-6 lg:p-10 gap-6 lg:gap-10
               ${index % 2 !== 0 ? "lg:flex-row-reverse" : ""}`}
             >
               <div className="flex-1 w-full relative group lg:px-6">
                 <div className="absolute inset-0 bg-primary/20 blur-[40px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="relative rounded-3xl overflow-hidden border border-primary/20 shadow-[0_25px_80px_rgba(212,175,55,0.18)] border border-border/50 aspect-[4/3] sm:aspect-video shadow-xl">
+                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-primary/20 border-border/50 shadow-[0_25px_80px_rgba(212,175,55,0.18)] shadow-xl sm:aspect-video lg:max-w-[26rem]">
                   <div className="absolute -inset-8 rounded-full bg-primary/15 blur-[80px]" />
                   <img
                     src={service.img}
                     alt={service.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
 
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
                 </div>
               </div>
 
-              <div className="flex-1 space-y-6">
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/25 to-primary/10 border border-primary/40 flex items-center justify-center shadow-[0_0_30px_rgba(212,175,55,0.25)]">
+              <div className="flex-1 space-y-5 text-center lg:text-left">
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-primary/40 bg-gradient-to-br from-primary/25 to-primary/10 shadow-[0_0_30px_rgba(212,175,55,0.25)] sm:h-16 sm:w-16 lg:mx-0 lg:h-20 lg:w-20">
                   <span className="text-5xl">{service.icon}</span>
                 </div>
 
-                <h3 className="text-3xl lg:text-4xl font-serif font-bold leading-tight text-primary">
+                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold leading-tight text-primary">
                   {service.title}
                 </h3>
 
-                <p className="text-lg leading-8 text-muted-foreground max-w-lg">
+                <p className="text-base sm:text-lg leading-7 text-muted-foreground max-w-lg">
                   {service.desc}
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4">
+                <div className="grid grid-cols-1 gap-3 pt-2 sm:grid-cols-2">
                   <div className="flex items-center gap-2">
                     <CheckCircle className="w-5 h-5 text-primary" />
-                    <span>100% गोपनीय परामर्श</span>
+                    <span>100% confidential consultation</span>
                   </div>
 
                   <div className="flex items-center gap-2">
                     <CheckCircle className="w-5 h-5 text-primary" />
-                    <span>व्यक्तिगत समाधान</span>
+                    <span>individual solutions</span>
                   </div>
 
                   <div className="flex items-center gap-2">
                     <CheckCircle className="w-5 h-5 text-primary" />
-                    <span>अनुभवी ज्योतिषाचार्य</span>
+                    <span>Experienced Astrologer</span>
                   </div>
 
                   <div className="flex items-center gap-2">
                     <CheckCircle className="w-5 h-5 text-primary" />
-                    <span>वैदिक पद्धति</span>
+                    <span>Vedic system</span>
                   </div>
                 </div>
 
@@ -367,10 +366,10 @@ function Services() {
                   rel="noopener noreferrer"
                 >
                   <Button
-                    size="lg"
-                    className="group rounded-full px-8 border border-primary bg-primary/10 hover:bg-primary hover:text-black transition-all duration-500"
+                    size="default"
+                    className="group w-full rounded-full border border-primary bg-primary/10 px-6 transition-all duration-500 hover:bg-primary hover:text-black sm:w-auto sm:px-8"
                   >
-                    ✨ अभी परामर्श लें
+                    ✨ Consult Now
                     <ArrowRight className="ml-2 transition-transform duration-500 group-hover:translate-x-2" />
                   </Button>
                 </a>
@@ -390,7 +389,7 @@ function Services() {
           </p>
         </div>
 
-        <div className="space-y-37 mb-40">
+        <div className="space-y-8 sm:space-y-12 lg:space-y-20 mb-16 sm:mb-24 lg:mb-32">
           {services.map((service, index) => (
             <motion.div
               key={service.id}
@@ -398,23 +397,23 @@ function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
-              className={`relative overflow-hidden rounded-[32px] border border-primary/20 bg-gradient-to-br from-card/90 via-card/80 to-card/90 backdrop-blur-xl shadow-[0_20px_60px_rgba(0,0,0,0.45)] hover:border-primary/50 transition-all duration-700 group p-8 lg:p-12 flex flex-col lg:flex-row items-center gap-12
+              className={`relative overflow-hidden rounded-3xl border border-primary/20 bg-gradient-to-br from-card/95 via-card/90 to-card/95 backdrop-blur-xl shadow-xl hover:shadow-2xl hover:border-primary/40 transition-all duration-500 group flex flex-col lg:flex-row items-center p-4 sm:p-6 lg:p-10 gap-6 lg:gap-10
               ${index % 2 !== 0 ? "lg:flex-row-reverse" : ""}`}
             >
-              <div className="flex-1 w-full relative group">
+              <div className="relative w-full lg:w-1/2">
                 <div className="absolute inset-0 bg-primary/20 blur-[40px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="relative rounded-3xl overflow-hidden border border-primary/20 shadow-[0_25px_80px_rgba(212,175,55,0.18)] border border-border/50 aspect-[4/3] sm:aspect-video shadow-xl">
+                <div className="relative overflow-hidden rounded-3xl border border-primary/20 h-48 sm:h-72 lg:h-auto sm:aspect-[4/3]">
                   <img
                     loading="lazy"
                     decoding="async"
                     src={service.img}
                     alt={service.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
                 </div>
               </div>
-              <div className="flex-1 space-y-6">
+              <div className="w-full space-y-3 text-center lg:w-1/2 lg:text-left">
                 <div className="text-4xl">{service.icon}</div>
                 <h3 className="text-2xl sm:text-3xl font-serif font-bold">
                   {service.title}
@@ -432,7 +431,7 @@ function Services() {
                     variant="outline"
                     className="w-full sm:w-auto border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground gap-2 "
                   >
-                    Consult for this <ChevronRight size={16} />
+                    ✨ Consult Now <ChevronRight size={16} />
                   </Button>
                 </a>
               </div>
@@ -497,7 +496,7 @@ function WhyChooseUs() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
               key={i}
-              className="bg-card/50 backdrop-blur-sm border border-border p-8 rounded-2xl hover:border-primary/50 transition-colors group"
+              className="group rounded-2xl border border-border bg-card/50 p-6 backdrop-blur-sm transition-colors hover:border-primary/50 sm:p-8"
             >
               <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 {feature.icon}
@@ -522,7 +521,7 @@ function About() {
       className="py-16 sm:py-20 lg:py-24 bg-card/30 border-y border-border/50"
     >
       <div className="container mx-auto px-5 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <div className="relative aspect-square max-w-[260px] sm:max-w-sm md:max-w-md mx-auto w-full">
             <div className="absolute inset-0 border-2 border-primary/30 rounded-full animate-[spin_60s_linear_infinite] border-dashed" />
             <div className="absolute inset-4 border border-primary/20 rounded-full animate-[spin_40s_linear_infinite_reverse]" />
@@ -557,7 +556,7 @@ function About() {
               remedies that bring real transformation.
             </p>
 
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-6">
+            <div className="grid grid-cols-2 gap-4 pt-6 sm:grid-cols-4 sm:gap-6">
               <div>
                 <div className="text-4xl font-serif font-bold text-primary mb-2">
                   5000+
@@ -685,7 +684,7 @@ function Testimonials() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -100 }}
               transition={{ duration: 0.5 }}
-              className="absolute inset-0 flex flex-col items-center justify-center text-center bg-card/40 backdrop-blur-lg border border-border p-6 sm:p-8 lg:p-12 rounded-3xl"
+              className="absolute inset-0 flex flex-col items-center justify-center rounded-3xl border border-border bg-card/40 p-6 text-center backdrop-blur-lg sm:p-8 lg:p-12"
             >
               <div className="flex gap-1 mb-6 text-primary">
                 {[...Array(5)].map((_, i) => (
@@ -752,7 +751,7 @@ function FAQ() {
       id="faq"
       className="py-16 sm:py-20 lg:py-24 bg-card/30 border-y border-border/50"
     >
-      <div className="container mx-auto px-5 sm:px-6 lg:px-8 max-w-3xl">
+      <div className="mx-auto w-full max-w-3xl px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-foreground mb-6">
             Frequently Asked Questions
@@ -894,7 +893,7 @@ function Contact() {
             </div>
           </div>
 
-          <div className="bg-card/50 backdrop-blur-md border border-border p-6 sm:p-8 rounded-3xl shadow-xl">
+          <div className="rounded-3xl border border-border bg-card/50 p-6 shadow-xl backdrop-blur-md sm:p-8">
             <h3 className="text-2xl font-serif font-bold text-foreground mb-6">
               Request Consultation
             </h3>

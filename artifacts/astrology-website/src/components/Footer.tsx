@@ -2,11 +2,11 @@ import { Link } from "wouter";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#05050f] border-t border-border py-12 md:py-16">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
+    <footer className="border-t border-border bg-[#05050f] py-12 sm:py-14 lg:py-16">
+      <div className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-4 xl:gap-10">
           
-          <div className="md:col-span-1 space-y-4">
+          <div className="space-y-4 sm:col-span-2 xl:col-span-1">
             <div className="flex items-center gap-2">
               <span className="text-3xl text-primary">🕉️</span>
               <div className="flex flex-col">
@@ -14,7 +14,7 @@ export default function Footer() {
                 <span className="font-serif text-xs text-primary leading-none tracking-widest">Tripathi Ji</span>
               </div>
             </div>
-            <p className="text-muted-foreground text-sm leading-relaxed mt-4">
+            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
               Premium Vedic astrology and spiritual guidance to illuminate your path through life's most challenging moments.
             </p>
           </div>
@@ -59,8 +59,8 @@ export default function Footer() {
 
         </div>
 
-        <div className="border-t border-border/50 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-muted-foreground text-center md:text-left">
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border/50 pt-8 md:flex-row">
+          <p className="text-center text-xs text-muted-foreground md:text-left">
             &copy; {new Date().getFullYear()} Pandit Vikas Chandra Tripathi Ji. All rights reserved.
           </p>
           <div className="flex items-center gap-4 text-xs text-muted-foreground">

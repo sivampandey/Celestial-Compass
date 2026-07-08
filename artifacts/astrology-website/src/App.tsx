@@ -32,11 +32,11 @@ function App() {
 
           <Splash />
 
-          <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary selection:text-primary-foreground flex flex-col">
+          <div className="min-h-screen w-full overflow-x-hidden bg-background text-foreground font-sans selection:bg-primary selection:text-primary-foreground flex flex-col">
 
             <Navbar />
 
-            <main className="flex-1">
+            <main className="flex-1 w-full overflow-x-hidden">
               <Router />
             </main>
 
