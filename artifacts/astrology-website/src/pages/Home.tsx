@@ -52,73 +52,70 @@ const API_URL = import.meta.env.VITE_API_URL ?? "http://localhost:3000";
 // --- HERO SECTION ---
 function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
+    <section className="relative pt-20 pb-12 sm:pt-24 sm:pb-14 lg:pt-28 lg:pb-16 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-30 mix-blend-screen pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/50 to-background pointer-events-none" />
 
       {/* Glowing Zodiac Wheel bg */}
-      <div className="absolute right-[-10%] top-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-10 pointer-events-none blur-sm animate-[spin_120s_linear_infinite]">
+      <div className="absolute right-[-10%] top-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-15 pointer-events-none blur-sm animate-[spin_120s_linear_infinite]">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Zodiac_woodcut.png"
           alt=""
-          className="w-full h-full object-contain invert brightness-200"
+          className="w-full h-full object-contain mix-blend-multiply opacity-30"
         />
       </div>
 
-      <div className="relative z-10 mx-auto grid w-full max-w-screen-2xl grid-cols-1 items-center gap-10 px-4 sm:px-6 sm:gap-12 lg:grid-cols-2 lg:gap-16 lg:px-8 xl:px-10 2xl:px-12">
+      <div className="relative z-10 mx-auto grid w-full max-w-screen-xl grid-cols-1 items-center gap-8 px-4 sm:px-6 lg:grid-cols-2 lg:gap-12 lg:px-8">
         {/* Text Content */}
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
+          initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="space-y-6 text-center lg:text-left"
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          className="space-y-4 text-center lg:text-left"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium tracking-wide">
-            <Star size={14} className="fill-primary" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-medium tracking-wide">
+            <Star size={13} className="fill-primary" />
             <span>Varanasi's Most Trusted Astrologer</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold leading-tight">
-            <span className="block text-primary drop-shadow-[0_0_15px_rgba(212,175,55,0.4)]">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight">
+            <span className="block text-primary drop-shadow-[0_0_12px_rgba(212,175,55,0.4)]">
               Pandit Vikas Chandra
             </span>
             Tripathi Ji
           </h1>
 
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground font-serif italic leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground font-serif italic leading-relaxed">
             Vedic Astrologer | Marriage Consultant{" "}
             <br className="hidden md:block" />
             Career & Financial Guidance Expert
           </p>
 
-          <div className="grid grid-cols-1 gap-3 text-sm text-foreground/80 sm:grid-cols-2 xl:grid-cols-3">
-            <div className="flex items-center gap-2 bg-card/50 backdrop-blur-sm border border-border px-4 py-2 rounded-lg">
-              <MapPin size={16} className="text-primary" />
-              <span>Rashulpur, Badagaon, Varanasi</span>
+          <div className="grid grid-cols-1 gap-2.5 text-xs sm:text-sm text-foreground/80 sm:grid-cols-2 xl:grid-cols-3">
+            <div className="flex items-center gap-2 bg-card/50 backdrop-blur-sm border border-border px-3 py-1.5 rounded-lg">
+              <MapPin size={15} className="text-primary shrink-0" />
+              <span className="truncate">Rashulpur, Badagaon, Varanasi</span>
             </div>
-            <div className="flex items-center gap-2 bg-card/50 backdrop-blur-sm border border-border px-4 py-2 rounded-lg">
-              <Award size={16} className="text-primary" />
+            <div className="flex items-center gap-2 bg-card/50 backdrop-blur-sm border border-border px-3 py-1.5 rounded-lg">
+              <Award size={15} className="text-primary shrink-0" />
               <span>15+ Years Experience</span>
             </div>
-            <div className="flex items-center gap-2 bg-card/50 backdrop-blur-sm border border-border px-4 py-2 rounded-lg">
-              <Users size={16} className="text-primary" />
+            <div className="flex items-center gap-2 bg-card/50 backdrop-blur-sm border border-border px-3 py-1.5 rounded-lg">
+              <Users size={15} className="text-primary shrink-0" />
               <span>5000+ Consultations</span>
             </div>
           </div>
 
-          <div className="flex flex-col justify-center gap-3 pt-6 sm:flex-row sm:flex-wrap lg:justify-start">
-            <Button
-              size="default"
-              className="w-full sm:w-auto h-12 sm:h-14 text-base bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_20px_rgba(212,175,55,0.3)]"
-            >
-              <a
-                href="#contact"
-                className="w-full h-full flex items-center justify-center"
+          <div className="flex flex-col justify-center gap-2.5 pt-3 sm:flex-row sm:flex-wrap lg:justify-start">
+            <a href="#contact" className="w-full sm:w-auto">
+              <Button
+                size="default"
+                className="w-full sm:w-auto h-10 text-xs sm:text-sm bg-gradient-to-r from-amber-500 to-amber-400 text-slate-950 font-bold hover:brightness-110 shadow-[0_0_15px_rgba(212,175,55,0.4)] border-0 px-5"
               >
                 Book Consultation
-              </a>
-            </Button>
+              </Button>
+            </a>
             <a
               href="https://wa.me/919918929709?text=Namaste%20Pandit%20Ji,%20I%20need%20astrological%20guidance"
               target="_blank"
@@ -127,23 +124,20 @@ function Hero() {
             >
               <Button
                 size="default"
-                className="w-full sm:w-auto h-12 sm:h-14 text-base bg-[#25D366] hover:bg-[#20bd5a] text-white"
+                className="w-full sm:w-auto h-10 text-xs sm:text-sm bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold px-5"
               >
                 Chat on WhatsApp
               </Button>
             </a>
-            <Button
-              size="default"
-              variant="outline"
-              className="w-full sm:w-auto h-12 sm:h-14 text-base border-primary/50 text-foreground hover:bg-primary/10"
-            >
-              <a
-                href="tel:+919918929709"
-                className="w-full h-full flex items-center justify-center"
+            <a href="tel:+919918929709" className="w-full sm:w-auto">
+              <Button
+                size="default"
+                variant="outline"
+                className="w-full sm:w-auto h-10 text-xs sm:text-sm border-primary/50 text-foreground hover:bg-primary/10 px-5"
               >
                 Call Now
-              </a>
-            </Button>
+              </Button>
+            </a>
           </div>
         </motion.div>
 
@@ -151,17 +145,17 @@ function Hero() {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="relative mx-auto w-full max-w-[20rem] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-[34rem] aspect-[3/4]"
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="relative mx-auto w-full max-w-[14rem] sm:max-w-[17rem] md:max-w-[20rem] lg:max-w-[22rem] aspect-[3/4]"
         >
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10 rounded-2xl" />
-          <div className="absolute -inset-4 bg-primary/20 blur-[50px] -z-10 rounded-full" />
+          <div className="absolute -inset-4 bg-primary/20 blur-[40px] -z-10 rounded-full" />
           <img
             src={heroImage}
             loading="eager"
             decoding="async"
             alt="Pandit Vikas Chandra Tripathi Ji"
-            className="w-full h-full object-cover rounded-xl sm:rounded-2xl border border-primary/20 shadow-2xl"
+            className="w-full h-full object-cover object-[center_15%] rounded-xl sm:rounded-2xl border border-primary/20 shadow-2xl"
           />
         </motion.div>
       </div>
@@ -178,6 +172,8 @@ const specialServices = [
     icon: "🔢",
     img: numerologyImage,
     desc: "Detailed analysis of personality, career, marriage, wealth and future based on date of birth and name numbers.",
+    cardBg: "from-amber-500/15 via-card to-orange-500/10 border-amber-500/40 hover:border-amber-600 shadow-md",
+    titleColor: "text-amber-800 font-bold",
   },
 
   {
@@ -186,6 +182,8 @@ const specialServices = [
     icon: "🏡",
     img: vastuImage,
     desc: "Get positive energy and prosperity by solving Vastu defects in your home, office and business place.",
+    cardBg: "from-emerald-500/15 via-card to-teal-500/10 border-emerald-500/40 hover:border-emerald-600 shadow-md",
+    titleColor: "text-emerald-800 font-bold",
   },
 
   {
@@ -194,6 +192,8 @@ const specialServices = [
     icon: "😊",
     img: faceReadingImage,
     desc: "In-depth study of nature, destiny and direction of life based on facial structure and expressions.",
+    cardBg: "from-purple-500/15 via-card to-pink-500/10 border-purple-500/40 hover:border-purple-600 shadow-md",
+    titleColor: "text-purple-800 font-bold",
   },
 
   {
@@ -202,6 +202,8 @@ const specialServices = [
     icon: "✋",
     img: palmistryImage,
     desc: "Know important signs of health, career, marriage and future from palm lines.",
+    cardBg: "from-rose-500/15 via-card to-orange-500/10 border-rose-500/40 hover:border-rose-600 shadow-md",
+    titleColor: "text-rose-800 font-bold",
   },
 ];
 
@@ -212,6 +214,7 @@ const services = [
     desc: "Resolve relationship conflicts, strengthen emotional bonds, and receive guidance for a happy and harmonious love life.",
     img: serviceLove,
     icon: "❤️",
+    color: "border-rose-400/40 hover:border-rose-500 text-rose-900 bg-rose-500/5 shadow-sm",
   },
   {
     id: "career",
@@ -219,6 +222,7 @@ const services = [
     desc: "Get expert astrological guidance for career growth, job opportunities, promotions, and professional success.",
     img: serviceCareer,
     icon: "💼",
+    color: "border-blue-400/40 hover:border-blue-500 text-blue-900 bg-blue-500/5 shadow-sm",
   },
   {
     id: "money",
@@ -226,6 +230,7 @@ const services = [
     desc: "Overcome financial challenges, attract prosperity, and receive remedies for stable income and business growth.",
     img: serviceMoney,
     icon: "💰",
+    color: "border-amber-400/40 hover:border-amber-500 text-amber-900 bg-amber-500/5 shadow-sm",
   },
   {
     id: "marriage",
@@ -233,6 +238,7 @@ const services = [
     desc: "Find solutions for delayed marriage, compatibility issues, Manglik Dosha, and marital harmony.",
     img: serviceMarriage,
     icon: "💍",
+    color: "border-purple-400/40 hover:border-purple-500 text-purple-900 bg-purple-500/5 shadow-sm",
   },
   {
     id: "business",
@@ -240,6 +246,7 @@ const services = [
     desc: "Receive astrological advice to overcome business obstacles, increase profits, and make confident business decisions.",
     img: serviceBusiness,
     icon: "📈",
+    color: "border-emerald-400/40 hover:border-emerald-500 text-emerald-900 bg-emerald-500/5 shadow-sm",
   },
   {
     id: "education",
@@ -247,6 +254,7 @@ const services = [
     desc: "Improve concentration, academic performance, and career direction with personalized astrological insights.",
     img: serviceEducation,
     icon: "📚",
+    color: "border-cyan-400/40 hover:border-cyan-500 text-cyan-900 bg-cyan-500/5 shadow-sm",
   },
   {
     id: "health",
@@ -254,6 +262,7 @@ const services = [
     desc: "Understand planetary influences on health and receive spiritual remedies for physical and mental well-being.",
     img: serviceHealth,
     icon: "🏥",
+    color: "border-teal-400/40 hover:border-teal-500 text-teal-900 bg-teal-500/5 shadow-sm",
   },
   {
     id: "legal",
@@ -261,6 +270,7 @@ const services = [
     desc: "Seek astrological support for legal disputes, court matters, and protection from unnecessary conflicts.",
     img: serviceLegal,
     icon: "⚖️",
+    color: "border-indigo-400/40 hover:border-indigo-500 text-indigo-900 bg-indigo-500/5 shadow-sm",
   },
   {
     id: "family",
@@ -268,6 +278,7 @@ const services = [
     desc: "Restore peace in family relationships, resolve domestic issues, and receive guidance for child-related concerns.",
     img: serviceFamily,
     icon: "👶",
+    color: "border-pink-400/40 hover:border-pink-500 text-pink-900 bg-pink-500/5 shadow-sm",
   },
   {
     id: "peace",
@@ -275,6 +286,7 @@ const services = [
     desc: "Reduce stress, achieve inner peace, and strengthen your spiritual journey through Vedic guidance.",
     img: servicePeace,
     icon: "🧘",
+    color: "border-violet-400/40 hover:border-violet-500 text-violet-900 bg-violet-500/5 shadow-sm",
   },
 ];
 
@@ -282,95 +294,80 @@ function Services() {
   return (
     <section
       id="services"
-      className="py-16 sm:py-20 lg:py-24 bg-card/30 relative"
+      className="py-12 sm:py-16 lg:py-20 bg-card/30 relative"
     >
-      <div className="container mx-auto px-5 sm:px-6 lg:px-8">
-        <div className="absolute top-32 left-10 w-96 h-96 rounded-full bg-primary/10 blur-[140px]" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-primary/10 blur-[140px]" />
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-screen-xl">
+        <div className="absolute top-32 left-10 w-72 h-72 rounded-full bg-primary/10 blur-[120px]" />
+        <div className="absolute bottom-20 right-10 w-72 h-72 rounded-full bg-primary/10 blur-[120px]" />
         {/* ===== Special Consultation Services ===== */}
 
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground mb-6">
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-foreground mb-3">
             Our Special Consultancy Services
           </h2>
 
-          <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-6" />
+          <div className="w-16 h-1 bg-gradient-to-r from-amber-500 via-purple-500 to-emerald-500 mx-auto rounded-full mb-3" />
 
-          <p className="text-muted-foreground text-lg">
+          <p className="text-muted-foreground text-sm sm:text-base">
             In-depth analysis of every important aspect of life through ancient Indian wisdom.
           </p>
         </div>
 
-        <div className="space-y-8 sm:space-y-12 lg:space-y-20 mb-16 sm:mb-24 lg:mb-32">
-          {specialServices.map((service, index) => (
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-5 mb-10 sm:mb-20">
+          {specialServices.map((service) => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className={`relative overflow-hidden rounded-3xl border border-primary/20 bg-gradient-to-br from-card/95 via-card/90 to-card/95 backdrop-blur-xl shadow-xl hover:shadow-2xl hover:border-primary/40 transition-all duration-500 group flex flex-col lg:flex-row items-center p-4 sm:p-6 lg:p-10 gap-6 lg:gap-10
-              ${index % 2 !== 0 ? "lg:flex-row-reverse" : ""}`}
+              transition={{ duration: 0.3 }}
+              className={`relative overflow-hidden rounded-xl border bg-gradient-to-br backdrop-blur-md transition-all duration-300 group flex flex-col justify-between p-2.5 sm:p-4 ${service.cardBg}`}
             >
-              <div className="flex-1 w-full relative group lg:px-6">
-                <div className="absolute inset-0 bg-primary/20 blur-[40px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-primary/20 border-border/50 shadow-[0_25px_80px_rgba(212,175,55,0.18)] shadow-xl sm:aspect-video lg:max-w-[26rem]">
-                  <div className="absolute -inset-8 rounded-full bg-primary/15 blur-[80px]" />
+              <div className="space-y-1.5 sm:space-y-3">
+                <div className="relative aspect-[16/9.5] w-full overflow-hidden rounded-lg border border-primary/20 bg-background/80">
                   <img
                     src={service.img}
                     alt={service.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-fill transition-transform duration-500 group-hover:scale-105"
                   />
-
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
-                </div>
-              </div>
-
-              <div className="flex-1 space-y-5 text-center lg:text-left">
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-primary/40 bg-gradient-to-br from-primary/25 to-primary/10 shadow-[0_0_30px_rgba(212,175,55,0.25)] sm:h-16 sm:w-16 lg:mx-0 lg:h-20 lg:w-20">
-                  <span className="text-5xl">{service.icon}</span>
+                  <div className="absolute top-1.5 right-1.5 flex h-5 w-5 sm:h-7 sm:w-7 items-center justify-center rounded-full border border-primary/40 bg-background/90 backdrop-blur-md shadow-md">
+                    <span className="text-[10px] sm:text-xs">{service.icon}</span>
+                  </div>
                 </div>
 
-                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold leading-tight text-primary">
+                <h3 className={`text-xs sm:text-lg font-serif font-bold truncate ${service.titleColor}`}>
                   {service.title}
                 </h3>
 
-                <p className="text-base sm:text-lg leading-7 text-muted-foreground max-w-lg">
+                <p className="text-[10px] sm:text-xs leading-tight text-muted-foreground line-clamp-2 sm:line-clamp-3">
                   {service.desc}
                 </p>
-                <div className="grid grid-cols-1 gap-3 pt-2 sm:grid-cols-2">
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary" />
-                    <span>100% confidential consultation</span>
-                  </div>
 
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary" />
-                    <span>individual solutions</span>
+                <div className="hidden sm:grid grid-cols-1 gap-1 text-[11px] pt-0.5 text-foreground/80">
+                  <div className="flex items-center gap-1.5">
+                    <CheckCircle className="w-3.5 h-3.5 text-primary shrink-0" />
+                    <span>100% Confidential</span>
                   </div>
-
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary" />
-                    <span>Experienced Astrologer</span>
-                  </div>
-
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary" />
-                    <span>Vedic system</span>
+                  <div className="flex items-center gap-1.5">
+                    <CheckCircle className="w-3.5 h-3.5 text-primary shrink-0" />
+                    <span>Personalized Remedies</span>
                   </div>
                 </div>
+              </div>
 
+              <div className="pt-2 sm:pt-4 mt-auto">
                 <a
                   href={`https://wa.me/919918929709?text=नमस्ते पंडित जी, मुझे ${encodeURIComponent(service.title)} के बारे में परामर्श चाहिए।`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="block"
                 >
                   <Button
                     size="default"
-                    className="group w-full rounded-full border border-primary bg-primary/10 px-6 transition-all duration-500 hover:bg-primary hover:text-black sm:w-auto sm:px-8"
+                    className="w-full rounded-md sm:rounded-lg bg-gradient-to-r from-amber-500 via-amber-400 to-yellow-500 text-slate-950 font-bold text-[10px] sm:text-xs shadow-sm hover:brightness-110 border-0 h-7 sm:h-9 px-1 sm:px-3 flex items-center justify-center gap-1 sm:gap-1.5"
                   >
                     ✨ Consult Now
-                    <ArrowRight className="ml-2 transition-transform duration-500 group-hover:translate-x-2" />
+                    <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                   </Button>
                 </a>
               </div>
@@ -378,60 +375,61 @@ function Services() {
           ))}
         </div>
 
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground mb-6">
+        <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-12">
+          <h2 className="text-xl sm:text-3xl md:text-4xl font-serif font-bold text-foreground mb-2.5 sm:mb-3">
             Problems We Help Solve
           </h2>
-          <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-6" />
-          <p className="text-muted-foreground text-lg">
+          <div className="w-14 sm:w-16 h-1 bg-gradient-to-r from-rose-500 via-amber-500 to-blue-500 mx-auto rounded-full mb-2.5 sm:mb-3" />
+          <p className="text-muted-foreground text-xs sm:text-base">
             Ancient Vedic wisdom tailored for modern challenges. Find clarity,
             purpose, and solutions to your life's deepest problems.
           </p>
         </div>
 
-        <div className="space-y-8 sm:space-y-12 lg:space-y-20 mb-16 sm:mb-24 lg:mb-32">
-          {services.map((service, index) => (
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-5 mb-10 sm:mb-16">
+          {services.map((service) => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6 }}
-              className={`relative overflow-hidden rounded-3xl border border-primary/20 bg-gradient-to-br from-card/95 via-card/90 to-card/95 backdrop-blur-xl shadow-xl hover:shadow-2xl hover:border-primary/40 transition-all duration-500 group flex flex-col lg:flex-row items-center p-4 sm:p-6 lg:p-10 gap-6 lg:gap-10
-              ${index % 2 !== 0 ? "lg:flex-row-reverse" : ""}`}
+              viewport={{ once: true, margin: "-30px" }}
+              transition={{ duration: 0.3 }}
+              className={`relative overflow-hidden rounded-xl border bg-card/70 backdrop-blur-md shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col justify-between ${service.color}`}
             >
-              <div className="relative w-full lg:w-1/2">
-                <div className="absolute inset-0 bg-primary/20 blur-[40px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="relative overflow-hidden rounded-3xl border border-primary/20 h-48 sm:h-72 lg:h-auto sm:aspect-[4/3]">
+              <div>
+                <div className="relative overflow-hidden aspect-[16/9.5] w-full bg-background/80">
                   <img
                     loading="lazy"
                     decoding="async"
                     src={service.img}
                     alt={service.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-fill transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+                  <div className="absolute top-1.5 right-1.5 bg-background/90 backdrop-blur-md px-1 sm:px-2 py-0.5 rounded-full border border-primary/30 text-[10px] sm:text-xs shadow-sm">
+                    {service.icon}
+                  </div>
+                </div>
+                <div className="p-2 sm:p-4 space-y-1 sm:space-y-1.5">
+                  <h3 className="text-xs sm:text-base font-serif font-bold group-hover:text-primary transition-colors line-clamp-1">
+                    {service.title}
+                  </h3>
+                  <p className="text-[10px] sm:text-xs leading-tight text-muted-foreground line-clamp-2">
+                    {service.desc}
+                  </p>
                 </div>
               </div>
-              <div className="w-full space-y-3 text-center lg:w-1/2 lg:text-left">
-                <div className="text-4xl">{service.icon}</div>
-                <h3 className="text-2xl sm:text-3xl font-serif font-bold">
-                  {service.title}
-                </h3>
-                <p className="text-base sm:text-lg leading-relaxed text-muted-foreground">
-                  {service.desc}
-                </p>
+
+              <div className="p-2 sm:p-4 pt-0 mt-auto">
                 <a
                   href={`https://wa.me/919918929709?text=Namaste%20Pandit%20Ji,%20I%20need%20guidance%20regarding%20${encodeURIComponent(service.title)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block"
+                  className="block"
                 >
                   <Button
-                    variant="outline"
-                    className="w-full sm:w-auto border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground gap-2 "
+                    className="w-full rounded-md sm:rounded-lg bg-gradient-to-r from-amber-500 to-amber-400 text-slate-950 font-bold text-[10px] sm:text-xs hover:brightness-110 shadow-sm border-0 h-7 sm:h-8 px-1 flex items-center justify-center gap-1"
                   >
-                    ✨ Consult Now <ChevronRight size={16} />
+                    ✨ Consult Now <ChevronRight size={12} />
                   </Button>
                 </a>
               </div>
@@ -447,64 +445,70 @@ function Services() {
 function WhyChooseUs() {
   const features = [
     {
-      icon: <Clock className="w-8 h-8 text-primary" />,
+      icon: <Clock className="w-4 h-4 sm:w-8 sm:h-8 text-amber-400" />,
+      bg: "bg-amber-500/20 border-amber-500/30",
       title: "15+ Years Experience",
       desc: "Decades of deep study and practice in authentic Vedic Astrology.",
     },
     {
-      icon: <CheckCircle className="w-8 h-8 text-primary" />,
+      icon: <CheckCircle className="w-4 h-4 sm:w-8 sm:h-8 text-emerald-400" />,
+      bg: "bg-emerald-500/20 border-emerald-500/30",
       title: "Personalized Solutions",
       desc: "No generic advice. Remedies tailored strictly to your unique Kundli.",
     },
     {
-      icon: <Shield className="w-8 h-8 text-primary" />,
+      icon: <Shield className="w-4 h-4 sm:w-8 sm:h-8 text-purple-400" />,
+      bg: "bg-purple-500/20 border-purple-500/30",
       title: "Confidential Consultation",
       desc: "Your identity and personal problems remain 100% secure and private.",
     },
     {
-      icon: <Clock className="w-8 h-8 text-primary" />,
+      icon: <Clock className="w-4 h-4 sm:w-8 sm:h-8 text-blue-400" />,
+      bg: "bg-blue-500/20 border-blue-500/30",
       title: "Fast Response",
       desc: "Quick availability for urgent and pressing life matters.",
     },
     {
-      icon: <Globe className="w-8 h-8 text-primary" />,
+      icon: <Globe className="w-4 h-4 sm:w-8 sm:h-8 text-rose-400" />,
+      bg: "bg-rose-500/20 border-rose-500/30",
       title: "Online Consultation",
       desc: "Connect from anywhere in the world via phone or WhatsApp.",
     },
     {
-      icon: <Users className="w-8 h-8 text-primary" />,
+      icon: <Users className="w-4 h-4 sm:w-8 sm:h-8 text-cyan-400" />,
+      bg: "bg-cyan-500/20 border-cyan-500/30",
       title: "Trusted By Thousands",
       desc: "Over 5000+ satisfied clients whose lives have been transformed.",
     },
   ];
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 relative overflow-hidden">
-      <div className="container mx-auto px-5 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground mb-6">
+    <section className="py-10 sm:py-20 lg:py-24 relative overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-16">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-serif font-bold text-foreground mb-3 sm:mb-6">
             Why Choose Us
           </h2>
-          <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
+          <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-amber-500 via-emerald-500 to-purple-500 mx-auto rounded-full" />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 xl:grid-cols-3 gap-2.5 sm:gap-6">
           {features.map((feature, i) => (
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.5 }}
+              transition={{ delay: i * 0.08, duration: 0.4 }}
               key={i}
-              className="group rounded-2xl border border-border bg-card/50 p-6 backdrop-blur-sm transition-colors hover:border-primary/50 sm:p-8"
+              className="group rounded-xl border border-border/80 bg-card/60 p-3 sm:p-8 backdrop-blur-sm transition-colors hover:border-primary/50"
             >
-              <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <div className={`w-8 h-8 sm:w-16 sm:h-16 rounded-lg sm:rounded-2xl border flex items-center justify-center mb-2.5 sm:mb-6 group-hover:scale-110 transition-transform ${feature.bg}`}>
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-3">
+              <h3 className="text-xs sm:text-xl font-bold text-foreground mb-1 sm:mb-3">
                 {feature.title}
               </h3>
-              <p className="text-muted-foreground">{feature.desc}</p>
+              <p className="text-[10px] sm:text-base text-muted-foreground line-clamp-2 sm:line-clamp-none">{feature.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -522,14 +526,14 @@ function About() {
     >
       <div className="container mx-auto px-5 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
-          <div className="relative aspect-square max-w-[260px] sm:max-w-sm md:max-w-md mx-auto w-full">
-            <div className="absolute inset-0 border-2 border-primary/30 rounded-full animate-[spin_60s_linear_infinite] border-dashed" />
-            <div className="absolute inset-4 border border-primary/20 rounded-full animate-[spin_40s_linear_infinite_reverse]" />
-            <div className="absolute inset-8 rounded-full overflow-hidden border-4 border-card shadow-2xl">
+          <div className="relative aspect-square max-w-[210px] sm:max-w-[260px] md:max-w-[300px] mx-auto w-full">
+            <div className="absolute inset-0 border-2 border-primary/40 rounded-full animate-[spin_60s_linear_infinite] border-dashed" />
+            <div className="absolute inset-3 border border-primary/30 rounded-full animate-[spin_40s_linear_infinite_reverse]" />
+            <div className="absolute inset-6 rounded-full overflow-hidden border-4 border-card shadow-2xl bg-card">
               <img
                 src={heroImage}
                 alt="Pandit Ji"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-[center_15%]"
               />
             </div>
           </div>
@@ -807,24 +811,38 @@ function Contact() {
     try {
       setLoading(true);
 
-      const response = await fetch(`${API_URL}/api/consultations`, {
+      // Attempt background backend save (non-blocking)
+      fetch(`${API_URL}/api/consultations`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
-      });
+      }).catch(() => {});
 
-      const data = await response.json();
+      // Format WhatsApp message for Pandit Ji (+91 9918929709)
+      const categoryMap: Record<string, string> = {
+        marriage: "Marriage & Relationship (विवाह व संबंध)",
+        career: "Job & Career (नौकरी व करियर)",
+        finance: "Money & Finance (धन व संपत्ति)",
+        health: "Health Issues (स्वास्थ्य समस्या)",
+        legal: "Court & Legal (कोर्ट व कानूनी मामले)",
+        other: "Other Guidance (अन्य परामर्श)",
+      };
 
-      if (!response.ok) {
-        throw new Error(data.message);
-      }
+      const categoryText = categoryMap[formData.category] || formData.category || "General Consultation";
+
+      const waMessage = `*नमस्ते पंडित जी!* 🙏\n*नया परामर्श अनुरोध (New Consultation Booking):*\n\n👤 *नाम (Name):* ${formData.name}\n📞 *फोन (Phone):* ${formData.phone}\n${formData.email ? `📧 *ईमेल (Email):* ${formData.email}\n` : ""}🏷️ *विषय (Category):* ${categoryText}\n📝 *संदेश (Message):* ${formData.message || "No details provided"}\n\nकृपया मुझे परामर्श का समय और मार्गदर्शन प्रदान करें।`;
+
+      const whatsappUrl = `https://wa.me/919918929709?text=${encodeURIComponent(waMessage)}`;
 
       toast({
-        title: "Success",
-        description: data.message,
+        title: "Redirecting to WhatsApp...",
+        description: "Opening WhatsApp to send your consultation request directly to Pandit Ji (+91 9918929709)...",
       });
+
+      // Open WhatsApp directly in new tab or app
+      window.open(whatsappUrl, "_blank");
 
       setFormData({
         name: "",
@@ -920,7 +938,7 @@ function Contact() {
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => handleChange("phone", e.target.value)}
-                    placeholder="+91"
+                    placeholder="+91 99189XXXXX"
                     className="bg-background border-border/50 focus-visible:ring-primary"
                   />
                 </div>
@@ -965,7 +983,6 @@ function Contact() {
                   Brief Message (Optional)
                 </label>
                 <Textarea
-                  required
                   value={formData.message}
                   onChange={(e) => handleChange("message", e.target.value)}
                   placeholder="How can Pandit Ji help you?"
@@ -975,9 +992,9 @@ function Contact() {
               <Button
                 type="submit"
                 disabled={loading}
-                className="w-full h-12 text-lg bg-primary text-primary-foreground hover:bg-primary/90"
+                className="w-full bg-gradient-to-r from-amber-500 to-amber-400 text-slate-950 font-bold hover:brightness-110 shadow-md border-0 h-11"
               >
-                {loading ? "Submitting..." : "Request Consultation"}
+                {loading ? "Redirecting..." : "✨ Submit & Send to WhatsApp"}
               </Button>
             </form>
           </div>

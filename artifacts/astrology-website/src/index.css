@@ -63,30 +63,30 @@
 
   --text-xs: 0.75rem;
   --text-xs--line-height: calc(1 / 0.75);
-  --text-sm: 0.875rem;
-  --text-sm--line-height: calc(1.25 / 0.875);
-  --text-base: 1rem;
-  --text-base--line-height: calc(1.5 / 1);
-  --text-lg: 1.125rem;
-  --text-lg--line-height: calc(1.75 / 1.125);
-  --text-xl: 1.25rem;
-  --text-xl--line-height: calc(1.75 / 1.25);
-  --text-2xl: 1.5rem;
-  --text-2xl--line-height: calc(2 / 1.5);
-  --text-3xl: 1.875rem;
-  --text-3xl--line-height: calc(2.25 / 1.875);
-  --text-4xl: 2.25rem;
-  --text-4xl--line-height: calc(2.5 / 2.25);
-  --text-5xl: 3rem;
-  --text-5xl--line-height: 1;
-  --text-6xl: 3.75rem;
-  --text-6xl--line-height: 1;
-  --text-7xl: 4.5rem;
-  --text-7xl--line-height: 1;
-  --text-8xl: 6rem;
-  --text-8xl--line-height: 1;
-  --text-9xl: 8rem;
-  --text-9xl--line-height: 1;
+  --text-sm: 0.85rem;
+  --text-sm--line-height: calc(1.2 / 0.85);
+  --text-base: 0.95rem;
+  --text-base--line-height: calc(1.45 / 0.95);
+  --text-lg: 1.05rem;
+  --text-lg--line-height: calc(1.6 / 1.05);
+  --text-xl: 1.15rem;
+  --text-xl--line-height: calc(1.6 / 1.15);
+  --text-2xl: 1.35rem;
+  --text-2xl--line-height: calc(1.75 / 1.35);
+  --text-3xl: 1.6rem;
+  --text-3xl--line-height: calc(2 / 1.6);
+  --text-4xl: 1.9rem;
+  --text-4xl--line-height: calc(2.2 / 1.9);
+  --text-5xl: 2.3rem;
+  --text-5xl--line-height: 1.15;
+  --text-6xl: 2.8rem;
+  --text-6xl--line-height: 1.15;
+  --text-7xl: 3.3rem;
+  --text-7xl--line-height: 1.15;
+  --text-8xl: 4rem;
+  --text-8xl--line-height: 1.1;
+  --text-9xl: 5rem;
+  --text-9xl--line-height: 1.1;
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -96,80 +96,80 @@
 
 /* LIGHT MODE / DEFAULT (we will default to dark actually, but fill it out) */
 :root {
-  --button-outline: rgba(255,255,255, .10);
-  --badge-outline: rgba(255,255,255, .05);
+  --button-outline: rgba(0,0,0, .08);
+  --badge-outline: rgba(0,0,0, .05);
 
   --opaque-button-border-intensity: 9;
 
-  --elevate-1: rgba(255,255,255, .04);
-  --elevate-2: rgba(255,255,255, .09);
+  --elevate-1: rgba(0,0,0, .03);
+  --elevate-2: rgba(0,0,0, .06);
 
-  /* Deep Indigo Cosmic Sky */
-  --background: 240 44% 7%;
+  /* Warm Light Orange & Saffron Cream Background */
+  --background: 30 85% 95%;
   
-  /* Ivory / Gold / Cream Text */
-  --foreground: 42 55% 97%;
+  /* Rich Deep Chocolate Brown Text for high contrast & legibility */
+  --foreground: 20 50% 15%;
   
-  --border: 240 30% 15%;
+  --border: 30 40% 84%;
 
-  /* Dark glassmorphism cards */
-  --card: 240 44% 10%;
-  --card-foreground: 42 55% 97%;
-  --card-border: 240 30% 15%;
+  /* Warm Peach Pearl Glass Cards */
+  --card: 30 100% 98.5%;
+  --card-foreground: 20 50% 15%;
+  --card-border: 30 40% 84%;
 
-  --popover: 240 44% 7%;
-  --popover-foreground: 42 55% 97%;
-  --popover-border: 240 30% 15%;
+  --popover: 30 100% 98.5%;
+  --popover-foreground: 20 50% 15%;
+  --popover-border: 30 40% 84%;
 
-  /* Molten Gold */
-  --primary: 46 65% 52%;
-  --primary-foreground: 240 44% 7%;
+  /* Royal Saffron Gold Accent */
+  --primary: 30 95% 46%;
+  --primary-foreground: 0 0% 100%;
 
-  /* Rich Purple Accent */
-  --secondary: 261 48% 35%;
-  --secondary-foreground: 42 55% 97%;
+  /* Soft Peach Accent */
+  --secondary: 20 80% 93%;
+  --secondary-foreground: 20 60% 25%;
 
   /* Muted subtle text */
-  --muted: 240 30% 15%;
-  --muted-foreground: 240 10% 65%;
+  --muted: 30 30% 90%;
+  --muted-foreground: 20 20% 40%;
 
-  --accent: 46 65% 52%;
-  --accent-foreground: 240 44% 7%;
+  --accent: 30 95% 46%;
+  --accent-foreground: 0 0% 100%;
 
   --destructive: 0 84% 60%;
-  --destructive-foreground: 42 55% 97%;
+  --destructive-foreground: 0 0% 100%;
 
-  --input: 240 30% 15%;
-  --ring: 46 65% 52%;
+  --input: 30 40% 84%;
+  --ring: 30 95% 46%;
 
-  --sidebar: 240 44% 7%;
-  --sidebar-foreground: 42 55% 97%;
-  --sidebar-border: 240 30% 15%;
-  --sidebar-primary: 46 65% 52%;
-  --sidebar-primary-foreground: 240 44% 7%;
-  --sidebar-accent: 261 48% 35%;
-  --sidebar-accent-foreground: 42 55% 97%;
-  --sidebar-ring: 46 65% 52%;
+  --sidebar: 30 85% 95%;
+  --sidebar-foreground: 20 50% 15%;
+  --sidebar-border: 30 40% 84%;
+  --sidebar-primary: 30 95% 46%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 20 80% 93%;
+  --sidebar-accent-foreground: 20 60% 25%;
+  --sidebar-ring: 30 95% 46%;
 
-  --chart-1: 46 65% 52%;
-  --chart-2: 261 48% 35%;
-  --chart-3: 120 40% 50%;
-  --chart-4: 0 84% 60%;
-  --chart-5: 180 50% 50%;
+  --chart-1: 30 95% 46%;
+  --chart-2: 20 80% 50%;
+  --chart-3: 160 60% 40%;
+  --chart-4: 350 75% 50%;
+  --chart-5: 210 80% 50%;
 
   --app-font-sans: 'Inter', sans-serif;
   --app-font-serif: 'Cormorant Garamond', serif;
   --app-font-mono: Menlo, monospace;
   --radius: 0.75rem;
 
-  --shadow-2xs: 0px 2px 0px 0px rgba(0,0,0,0.2);
-  --shadow-xs: 0px 2px 0px 0px rgba(0,0,0,0.2);
-  --shadow-sm: 0px 2px 0px 0px rgba(0,0,0,0.2), 0px 1px 2px -1px rgba(0,0,0,0.2);
-  --shadow: 0px 2px 0px 0px rgba(0,0,0,0.2), 0px 1px 2px -1px rgba(0,0,0,0.2);
-  --shadow-md: 0px 2px 0px 0px rgba(0,0,0,0.2), 0px 2px 4px -1px rgba(0,0,0,0.2);
-  --shadow-lg: 0px 2px 0px 0px rgba(0,0,0,0.2), 0px 4px 6px -1px rgba(0,0,0,0.2);
-  --shadow-xl: 0px 2px 0px 0px rgba(0,0,0,0.2), 0px 8px 10px -1px rgba(0,0,0,0.2);
-  --shadow-2xl: 0px 2px 0px 0px rgba(0,0,0,0.2);
+  --shadow-2xs: 0px 2px 4px 0px rgba(180,100,40,0.06);
+  --shadow-xs: 0px 2px 4px 0px rgba(180,100,40,0.08);
+  --shadow-sm: 0px 3px 8px -2px rgba(180,100,40,0.12);
+  --shadow: 0px 4px 12px -2px rgba(180,100,40,0.12);
+  --shadow-md: 0px 6px 16px -4px rgba(180,100,40,0.15);
+  --shadow-lg: 0px 10px 24px -6px rgba(180,100,40,0.18);
+  --shadow-xl: 0px 16px 32px -8px rgba(180,100,40,0.2);
+  --shadow-2xl: 0px 24px 48px -12px rgba(180,100,40,0.22);
   --tracking-normal: 0em;
   --spacing: 0.25rem;
 
@@ -190,41 +190,35 @@
 }
 
 .dark {
-  /* same theme since the default is dark */
-  --background: 240 44% 7%;
-  --foreground: 42 55% 97%;
-  --border: 240 30% 15%;
-  --card: 240 44% 10%;
-  --card-foreground: 42 55% 97%;
-  --card-border: 240 30% 15%;
-  --popover: 240 44% 7%;
-  --popover-foreground: 42 55% 97%;
-  --popover-border: 240 30% 15%;
-  --primary: 46 65% 52%;
-  --primary-foreground: 240 44% 7%;
-  --secondary: 261 48% 35%;
-  --secondary-foreground: 42 55% 97%;
-  --muted: 240 30% 15%;
-  --muted-foreground: 240 10% 65%;
-  --accent: 46 65% 52%;
-  --accent-foreground: 240 44% 7%;
+  --background: 30 85% 95%;
+  --foreground: 20 50% 15%;
+  --border: 30 40% 84%;
+  --card: 30 100% 98.5%;
+  --card-foreground: 20 50% 15%;
+  --card-border: 30 40% 84%;
+  --popover: 30 100% 98.5%;
+  --popover-foreground: 20 50% 15%;
+  --popover-border: 30 40% 84%;
+  --primary: 30 95% 46%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 20 80% 93%;
+  --secondary-foreground: 20 60% 25%;
+  --muted: 30 30% 90%;
+  --muted-foreground: 20 20% 40%;
+  --accent: 30 95% 46%;
+  --accent-foreground: 0 0% 100%;
   --destructive: 0 84% 60%;
-  --destructive-foreground: 42 55% 97%;
-  --input: 240 30% 15%;
-  --ring: 46 65% 52%;
-  --sidebar: 240 44% 7%;
-  --sidebar-foreground: 42 55% 97%;
-  --sidebar-border: 240 30% 15%;
-  --sidebar-primary: 46 65% 52%;
-  --sidebar-primary-foreground: 240 44% 7%;
-  --sidebar-accent: 261 48% 35%;
-  --sidebar-accent-foreground: 42 55% 97%;
-  --sidebar-ring: 46 65% 52%;
-  --chart-1: 46 65% 52%;
-  --chart-2: 261 48% 35%;
-  --chart-3: 120 40% 50%;
-  --chart-4: 0 84% 60%;
-  --chart-5: 180 50% 50%;
+  --destructive-foreground: 0 0% 100%;
+  --input: 30 40% 84%;
+  --ring: 30 95% 46%;
+  --sidebar: 30 85% 95%;
+  --sidebar-foreground: 20 50% 15%;
+  --sidebar-border: 30 40% 84%;
+  --sidebar-primary: 30 95% 46%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 20 80% 93%;
+  --sidebar-accent-foreground: 20 60% 25%;
+  --sidebar-ring: 30 95% 46%;
 }
 
 @layer base {
@@ -234,6 +228,13 @@
 
   html {
     @apply scroll-smooth;
+    font-size: 87.5%;
+  }
+
+  @media (max-width: 640px) {
+    html {
+      font-size: 81.25%;
+    }
   }
 
   body {
