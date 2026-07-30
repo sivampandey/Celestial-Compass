@@ -24,6 +24,8 @@ Visitors can explore astrology services, learn about different consultation meth
 
 Frontend
 
+manasastrology.in
+
 https://celestial-compass-astrology-website.vercel.app/
 
 Backend
