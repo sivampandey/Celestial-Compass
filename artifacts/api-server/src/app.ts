@@ -55,7 +55,7 @@ app.use("/api", router);
 
 app.get("/", (_req, res) => {
   res.json({
-    name: "Celestial Compass API",
+    name: "Manas Astrology API",
     status: "Running",
     version: "1.0.0",
   });

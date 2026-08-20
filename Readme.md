@@ -1,4 +1,4 @@
-# 🌌 Celestial Compass – Premium Astrology Consultation Website
+# 🌌 Manas Astrology – Premium Astrology Consultation Website
 
 ![React](https://img.shields.io/badge/React-19-blue?logo=react)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?logo=typescript)
@@ -13,7 +13,7 @@
 
 ## ✨ Overview
 
-Celestial Compass is a modern, premium astrology consultation platform designed for **Pandit Vikas Chandra Tripathi Ji**.
+Manas Astrology is a modern, premium astrology consultation platform designed for **Pandit Vikas Chandra Tripathi Ji**.
 
 The website combines traditional Vedic astrology with a modern UI to provide an elegant and engaging user experience.
 
@@ -50,8 +50,8 @@ Instagram: @vikaspandit668
 ### Clone Repository
 
 ```bash
-git clone https://github.com/your-username/Celestial-Compass.git
-cd Celestial-Compass
+git clone https://github.com/sivampandey/Manas_Astrology.git
+cd Manas_Astrology
 ```
 
 ### Install Dependencies
@@ -105,7 +105,7 @@ npm run build
   - `SUPABASE_URL=https://twulimuwpfmujhyleays.supabase.co`
   - `SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key`
   - `RESEND_API_KEY=your_resend_key`
-  - `RESEND_FROM_EMAIL=Celestial Compass <onboarding@resend.dev>`
+  - `RESEND_FROM_EMAIL=Manas Astrology <onboarding@resend.dev>`
   - `JWT_SECRET=your_secret`
   - `FRONTEND_URL=https://manasastrology.in`
 

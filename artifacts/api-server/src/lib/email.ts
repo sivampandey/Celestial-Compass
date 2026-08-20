@@ -14,7 +14,7 @@ export async function sendConfirmationEmail(
 
   const result = await resend.emails.send({
     
-    from: process.env.RESEND_FROM_EMAIL || "Celestial Compass <onboarding@resend.dev>",
+    from: process.env.RESEND_FROM_EMAIL || "Manas Astrology <onboarding@resend.dev>",
     to: customerEmail,
     subject: "Consultation Request Received",
     html: `

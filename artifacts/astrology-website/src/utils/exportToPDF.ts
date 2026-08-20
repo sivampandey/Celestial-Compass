@@ -5,7 +5,7 @@ export function exportToPDF(data: any[], fileName: string) {
   const doc = new jsPDF();
 
   doc.setFontSize(20);
-  doc.text("Celestial Compass", 14, 20);
+  doc.text("Manas Astrology", 14, 20);
 
   doc.setFontSize(12);
   doc.text("Consultation Report", 14, 30);
