@@ -1,8 +1,7 @@
 import { Router } from "express";
 import { z } from "zod";
-import { eq } from "drizzle-orm";
 import { sendConfirmationEmail } from "../lib/email";
-import { db, consultations } from "@workspace/db";
+import { supabase } from "../lib/supabase";
 
 const router = Router();
 
@@ -23,13 +22,21 @@ router.post("/consultations", async (req, res) => {
   try {
     const data = consultationSchema.parse(req.body);
 
-    await db.insert(consultations).values({
+    const { error } = await supabase.from("consultations").insert({
       name: data.name,
       phone: data.phone,
-      email: data.email,
+      email: data.email || null,
       category: data.category,
       message: data.message,
     });
+
+    if (error) {
+      console.error("Supabase Insert Error:", error);
+      return res.status(500).json({
+        success: false,
+        message: "Failed to save consultation",
+      });
+    }
 
     if (data.email) {
       await sendConfirmationEmail(data.name, data.email);
@@ -59,9 +66,17 @@ router.post("/consultations", async (req, res) => {
 
 router.delete("/consultations/:id", async (req, res) => {
   try {
-    await db
-      .delete(consultations)
-      .where(eq(consultations.id, Number(req.params.id)));
+    const { error } = await supabase
+      .from("consultations")
+      .delete()
+      .eq("id", Number(req.params.id));
+
+    if (error) {
+      console.error("Supabase Delete Error:", error);
+      return res.status(500).json({
+        success: false,
+      });
+    }
 
     return res.json({
       success: true,

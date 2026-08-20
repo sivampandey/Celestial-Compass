@@ -18,8 +18,14 @@ if (!process.env.DATABASE_URL) {
   );
 }
 
+const useSsl =
+  process.env.NODE_ENV === "production" ||
+  process.env.DATABASE_URL.includes("supabase.co") ||
+  process.env.DATABASE_URL.includes("sslmode=require");
+
 export const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
+  ssl: useSsl ? { rejectUnauthorized: false } : undefined,
 });
 
 export const db = drizzle(pool, { schema });

@@ -32,9 +32,8 @@ export const insertConsultationSchema =
     createdAt: true,
   });
 
-export type InsertConsultation = z.infer<
-  typeof insertConsultationSchema
->;
+export type InsertConsultation =
+  typeof insertConsultationSchema extends z.ZodType<infer Out> ? Out : never;
 
 export type Consultation =
   typeof consultations.$inferSelect;

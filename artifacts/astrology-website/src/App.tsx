@@ -12,7 +12,10 @@ import { setBaseUrl } from "@workspace/api-client-react";
 
 const queryClient = new QueryClient();
 
-setBaseUrl(import.meta.env.VITE_API_URL);
+if (import.meta.env.VITE_API_URL) {
+  const cleanApiUrl = import.meta.env.VITE_API_URL.replace(/\/+$/, "").replace(/\/api$/, "");
+  setBaseUrl(cleanApiUrl);
+}
 
  function Router() {
   return (

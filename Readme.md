@@ -5,8 +5,9 @@
 ![Vite](https://img.shields.io/badge/Vite-7-purple?logo=vite)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4-38BDF8?logo=tailwindcss)
 ![Framer Motion](https://img.shields.io/badge/Framer--Motion-Latest-black)
-![Railway](https://img.shields.io/badge/Backend-Railway-success)
-![Vercel](https://img.shields.io/badge/Frontend-Vercel-black)
+![Render](https://img.shields.io/badge/Backend-Render-black?logo=render)
+![Supabase](https://img.shields.io/badge/Database-Supabase-3ECF8E?logo=supabase)
+![Vercel](https://img.shields.io/badge/Frontend-Vercel-black?logo=vercel)
 
 ---
 
@@ -16,21 +17,18 @@ Celestial Compass is a modern, premium astrology consultation platform designed 
 
 The website combines traditional Vedic astrology with a modern UI to provide an elegant and engaging user experience.
 
-Visitors can explore astrology services, learn about different consultation methods, understand common life problems, and instantly connect through WhatsApp.
+Visitors can explore astrology services, learn about different consultation methods, understand common life problems, and instantly connect through WhatsApp or book consultations.
 
 ---
 
-# 🌐 Live Website
+# 🌐 Live Architecture
 
-Frontend
-
-manasastrology.in
-
-https://celestial-compass-astrology-website.vercel.app/
-
-Backend
-
-Railway Deployment
+- **Frontend:** React + Vite + TypeScript (Hosted on Vercel)
+  `https://manasastrology.in`
+- **Backend:** Node.js + Express API (Hosted on Render)
+- **Database:** Supabase PostgreSQL
+- **ORM:** Drizzle ORM
+- **Package Manager:** `npm` (npm Workspaces)
 
 ---
 
@@ -42,304 +40,87 @@ Railway Deployment
 Varanasi, Uttar Pradesh  
 India – 221204
 
-📱 WhatsApp
-
-9918929709
-
-Instagram
-
-@vikaspandit668
+📱 WhatsApp: 9918929709  
+Instagram: @vikaspandit668
 
 ---
 
-# 🚀 Features
+# 📦 Installation & Local Development
 
-## 🏠 Hero Section
-
-- Premium animated hero
-- Vedic theme
-- Responsive layout
-- WhatsApp CTA
-- Scroll animations
-
----
-
-## 🔮 Astrology Services
-
-- Horoscope Consultation
-- Kundli Matching
-- Marriage Problems
-- Career Guidance
-- Business Astrology
-- Financial Solutions
-- Health Consultation
-- Education Guidance
-
----
-
-## ✨ Special Consultation Services
-
-- 🔢 Numerology (अंक ज्योतिष)
-- 🏡 Vaastu Shastra (वास्तु शास्त्र)
-- 😊 Face Reading (फेस रीडिंग)
-- ✋ Palmistry (हस्त रेखा विज्ञान)
-
-Features
-
-- Animated cards
-- Glassmorphism UI
-- Premium typography
-- Hover animations
-- WhatsApp consultation button
-
----
-
-## ❤️ Problems We Help Solve
-
-- Love & Relationship
-- Marriage Delay
-- Career Problems
-- Business Loss
-- Financial Issues
-- Education
-- Health
-- Child Birth
-- Family Disputes
-- Legal Problems
-
----
-
-## ⭐ Testimonials
-
-- Client reviews
-- Smooth animations
-- Premium cards
-
----
-
-## 📞 Consultation Form
-
-- Responsive
-- Modern UI
-- WhatsApp Integration
-- Instant Contact
-
----
-
-## 📱 Floating Buttons
-
-- WhatsApp
-- Call Button
-
----
-
-# 🖥 Tech Stack
-
-## Frontend
-
-- React
-- TypeScript
-- Vite
-- Tailwind CSS
-- Framer Motion
-- Lucide Icons
-
-## Backend
-
-- Node.js
-- Express.js
-
-## Database
-
-- PostgreSQL
-- Drizzle ORM
-
-## Deployment
-
-Frontend
-
-- Vercel
-
-Backend
-
-- Railway
-
----
-
-# 📂 Project Structure
-
-```
-artifacts/
-│
-├── astrology-website/
-│
-│── src/
-│   ├── assets/
-│   ├── components/
-│   ├── hooks/
-│   ├── pages/
-│   ├── utils/
-│   ├── App.tsx
-│   ├── main.tsx
-│   └── index.css
-│
-├── api-server/
-│
-├── lib/
-│
-└── scripts/
-```
-
----
-
-# 🎨 UI Features
-
-- Premium Dark Theme
-- Golden Accent Colors
-- Glassmorphism
-- Framer Motion Animations
-- Responsive Design
-- Luxury Typography
-- Smooth Scrolling
-- Hover Effects
-- Mobile Optimized
-
----
-
-# ⚡ Performance
-
-- Lazy Loading
-- Optimized Images
-- Fast Page Rendering
-- Responsive Layout
-- SEO Friendly
-
----
-
-# 📦 Installation
-
-Clone Repository
+### Clone Repository
 
 ```bash
 git clone https://github.com/your-username/Celestial-Compass.git
-```
-
-Go to Project
-
-```bash
 cd Celestial-Compass
 ```
 
-Install Dependencies
+### Install Dependencies
 
 ```bash
-pnpm install
+npm install
 ```
 
-Run Development Server
+### Setup Environment Variables
+
+Copy `.env.example` to `.env`:
 
 ```bash
-pnpm dev
+cp .env.example .env
 ```
 
-Build
+### Run Development Server
 
 ```bash
-pnpm build
+# Start frontend
+npm run dev --workspace=@workspace/astrology-website
+
+# Start API server
+npm run dev --workspace=@workspace/api-server
 ```
 
-Preview
+### Typecheck & Production Build
 
 ```bash
-pnpm preview
+npm run typecheck
+npm run build
 ```
 
 ---
 
-# 🌍 Environment Variables
+# 🌍 Deployment Configuration
 
-Frontend
+### 1. Database Setup (Supabase SQL Migration)
+1. Open your project on [Supabase Dashboard](https://supabase.com/dashboard/project/twulimuwpfmujhyleays).
+2. Go to **SQL Editor** -> **New Query**.
+3. Copy the contents of `supabase/sql/001_create_consultations.sql`.
+4. Click **Run** to execute the migration.
+5. Verify in the **Table Editor** that `public.consultations` is created.
 
-```
-VITE_API_URL=your_backend_url
-```
+### 2. Backend (Render)
+- Deploy `@workspace/api-server` as a Web Service on [Render](https://render.com/).
+- **Build Command:** `npm install && npm run build`
+- **Start Command:** `npm start --workspace=@workspace/api-server`
+- **Environment Variables:**
+  - `NODE_ENV=production`
+  - `SUPABASE_URL=https://twulimuwpfmujhyleays.supabase.co`
+  - `SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key`
+  - `RESEND_API_KEY=your_resend_key`
+  - `RESEND_FROM_EMAIL=Celestial Compass <onboarding@resend.dev>`
+  - `JWT_SECRET=your_secret`
+  - `FRONTEND_URL=https://manasastrology.in`
 
-Backend
-
-```
-DATABASE_URL=your_database_url
-
-NODE_ENV=production
-
-PORT=5000
-```
-
----
-
-# 📷 Assets
-
-Service Images
-
-- Hero Banner
-- Numerology
-- Vaastu
-- Face Reading
-- Palmistry
-- Problem Icons
-
----
-
-# 📈 Future Improvements
-
-- Online Appointment Booking
-- Payment Gateway
-- Multi-language Support
-- Astrology Blog
-- Admin Dashboard
-- Customer Login
-- AI Horoscope Generator
-- Live Chat
-- Online Video Consultation
-
----
-
-# 👨‍💻 Developer
-
-Designed & Developed by
-
-**Shivam Pandey**
+### 3. Frontend (Vercel)
+- Deploy `@workspace/astrology-website` on [Vercel](https://vercel.com/).
+- **Root Directory:** `artifacts/astrology-website`
+- **Build Command:** `npm run build`
+- **Output Directory:** `dist/public`
+- **Environment Variables:**
+  - `VITE_API_URL=https://YOUR-RENDER-SERVICE.onrender.com/api`
 
 ---
 
 # 📄 License
 
-This project is developed for a private client.
-
-Unauthorized copying, distribution, or commercial use without permission is prohibited.
-
----
-
-# ⭐ Acknowledgements
-
-Built with ❤️ using
-
-- React
-- TypeScript
-- Tailwind CSS
-- Framer Motion
-- Express.js
-- PostgreSQL
-- Railway
-- Vercel
-
----
-
-## 🙏 Thank You
-
-Thank you for visiting Celestial Compass.
-
-We hope this platform helps people find clarity, guidance, and positivity through the wisdom of Vedic Astrology.
-
-🕉️ Om Tat Sat
+This project is developed for a private client. Unauthorized copying, distribution, or commercial use without permission is prohibited.
 
 Maintained by **Shivam Pandey**.

@@ -25,7 +25,29 @@ app.use(
     },
   }),
 );
-app.use(cors());
+
+const corsOrigin = process.env.FRONTEND_URL || process.env.CORS_ORIGIN;
+const allowedOrigins = corsOrigin
+  ? corsOrigin.split(",").map((o) => o.trim().replace(/\/+$/, ""))
+  : [];
+
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.length === 0) {
+        return callback(null, true);
+      }
+      const cleanOrigin = origin.replace(/\/+$/, "");
+      if (allowedOrigins.includes(cleanOrigin)) {
+        return callback(null, true);
+      }
+      return callback(new Error("Not allowed by CORS"));
+    },
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  }),
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

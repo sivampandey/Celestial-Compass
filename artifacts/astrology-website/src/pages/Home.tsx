@@ -47,7 +47,8 @@ import serviceLegal from "@/assets/images/service-legal.png";
 import serviceFamily from "@/assets/images/service-family.png";
 import servicePeace from "@/assets/images/service-peace.png";
 
-const API_URL = import.meta.env.VITE_API_URL ?? "http://localhost:3000";
+const rawApiUrl = import.meta.env.VITE_API_URL ?? "http://localhost:3000";
+const API_URL = rawApiUrl.replace(/\/+$/, "").replace(/\/api$/, "");
 
 // --- HERO SECTION ---
 function Hero() {

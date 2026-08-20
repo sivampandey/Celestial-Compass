@@ -2,12 +2,16 @@
   "name": "workspace",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "pnpm@11.9.0",
   "license": "MIT",
+  "workspaces": [
+    "artifacts/*",
+    "lib/*",
+    "scripts"
+  ],
   "scripts": {
-    "build": "pnpm run typecheck && pnpm -r --if-present run build",
+    "build": "npm run typecheck && npm run build --workspaces --if-present",
     "typecheck:libs": "tsc --build",
-    "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck"
+    "typecheck": "npm run typecheck:libs && npm run typecheck --workspace=artifacts/api-server --workspace=artifacts/astrology-website --workspace=artifacts/mockup-sandbox --workspace=scripts --if-present"
   },
   "devDependencies": {
     "dotenv": "^17.4.2",
